@@ -1,0 +1,93 @@
+\documentclass[
+	12pt,
+	a4paper,
+	bibtotocnumbered
+	]{scrreprt}		                                   
+
+% Kodierung und Sprache
+\usepackage[utf8]{inputenc}
+
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=quotes]{csquotes}
+
+% Seitenränder
+\usepackage[a4paper, left=2.5cm, right=3.0cm, top=2.5cm, bottom=2.0cm, includefoot]{geometry}
+
+% Überschriften
+\renewcommand*\chapterheadstartvskip{\vspace*{-\topskip}} % kein oberer Abstand
+
+% Absatzlayout
+\usepackage[parfill]{parskip}
+
+% Maskierung von URLs und Dateipfaden
+\usepackage[hyphens]{url}
+
+%  Abbildungen 
+\usepackage{graphicx}
+\usepackage{caption}
+
+%  Schriften 
+\usepackage{mathptmx} % Times New Roman
+\addtokomafont{disposition}{\rmfamily}
+\usepackage[onehalfspacing]{setspace}
+
+%  Misc 
+\usepackage{blindtext}
+\usepackage[printonlyused]{acronym}
+\usepackage[linktoc=all, hidelinks]{hyperref}
+
+%  Literatur 
+\usepackage[backend=biber, hyperref=true, style=authoryear-icomp]{biblatex}
+\addbibresource{bibliography.bib}
+
+\renewcaptionname{ngerman}\figureautorefname{Abb.}
+\captionsetup[table]{belowskip=8pt}
+
+
+\begin{document}
+
+
+
+% ============================ FRONT MATTER
+\newcommand{\thema}{THEMA}
+\newcommand{\abgabedatum}{\today}
+\newcommand{\zusammenfassung}{Abstract..}
+
+\pagenumbering{Roman}
+\begin{singlespace}
+\include{cover}
+\setcounter{page}{1}
+\include{abstract}
+\end{singlespace}
+
+\tableofcontents
+\listoffigures
+\include{abkuerzungen}
+
+\cleardoublepage
+% ============================ ENDE FRONT MATTER
+
+
+% ============================ HAUPTTEIL
+\pagenumbering{arabic}
+
+
+% ============================ CHAPTERS
+
+\include{chapter/einleitung}
+\include{chapter/hauptteil}
+\include{chapter/fazit}
+
+% ============================ ENDE HAUPTTEIL
+
+% ============================ LITERATURVERZEICHNIS
+
+\begin{singlespace}
+\printbibliography
+\end{singlespace}
+
+% ============================ ENDE LITERATURVERZEICHNIS
+
+
+
+\end{document}
