@@ -36,6 +36,10 @@
 \usepackage[printonlyused]{acronym}
 \usepackage[linktoc=all, hidelinks]{hyperref}
 
+% Inhaltsverzeichnis
+\setcounter{tocdepth}{6}
+\setcounter{secnumdepth}{3}
+
 %  Literatur 
 \usepackage[backend=biber, hyperref=true, style=authoryear-icomp]{biblatex}
 \addbibresource{bibliography.bib}
@@ -76,8 +80,8 @@
 
 \include{chapter/einleitung}
 \include{chapter/grundlagen}
-\include{chapter/horizontale-entwicklung}
 \include{chapter/vertikale-entwicklung}
+\include{chapter/horizontale-entwicklung}
 \include{chapter/fazit}
 
 % ============================ ENDE HAUPTTEIL
