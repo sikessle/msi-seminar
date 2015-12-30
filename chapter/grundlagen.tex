@@ -9,44 +9,251 @@ Diese Arbeit kategorisiert die Vorgehensmodelle zur Entwicklung von Software in 
 Unter \emph{klassisch} werden alle Vorgehensmodelle, die nicht agil und somit plangetrieben sind zusammengefasst.
 Im Fokus dieses Abschnitts steht die Erläuterung relevanter Vertreter dieser Kategorien.
 
-FOKUS AUF MANAGEMENT
-
 \subsection{Klassisch} % 3 Seiten
 
 Nachfolgend sollen einige wichtige klassische iterative als auch nicht-iterative Vorgehensmodelle kurz vorgestellt werden.
 
 \subsection{Wasserfallmodell}
 
-Das Wasserfallmodell wird konzeptionell das erste mal in \parencite[][]{Royce:1987aa} beschrieben.
+Das Wasserfallmodell wird konzeptionell das erste mal in \parencite[][]{Royce:1970aa} beschrieben.
+Es beschreibt ein rein sequentielles Vorgehen in der Entwicklung (vgl. \autoref{fig:wasserfallmodell}). 
+Dabei fließt der Output einer vorgelagerten Stufe stets als Input in die nachgelagerte Stufe.
 
-Name "Wasserfallmodell" erstmals erwähnt. \parencite[Vgl.][S. XY]{Benington:1983aa}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/wasserfallmodell.png}
+  \caption{Grundlegendes Wasserfallmodell \parencite[][]{Royce:1970aa}}
+  \label{fig:wasserfallmodell}
+\end{figure}
 
-Finde heutzutage kaum noch Anwendung.  \parencite[Vgl.][S. 48]{Schatten:2010aa}
+Dieses Modell weist eine sehr gute Planbarkeit auf, da es streng abgegrenzte Phasen gibt. 
+Bezeichnend ist, dass die jeweiligen Phasen stets vollständig abgeschlossen sein müssen, bevor zu der nächsten Phase übergegangen wird \parencite[Vgl.][S. 48]{Schatten:2010aa}.
+Erweiterungen des Modells bestehen in der Einführung einer Rücksprungmöglichkeit, wenn in einer Phase Fehler erkannt oder sonstige Richtlinien verletzt werden.
+Dieses sequentielle Vorgehen hat den Nachteil, dass der Kunde lediglich am Anfang und am Ende in den Entwicklungsprozess miteinbezogen wird.
+Änderungswünsche während der Entwicklung werden nicht berücksichtigt.
+Auch das Auftreten von Risiken verzögert den Projektverlauf, da alle nachgelagerten Phasen betroffen sind.
+
+Dass dieses Modell für große Softwareprojekte meist wenig geeignet ist, wurde bereits 1970 erkannt: \enquote{In my experience, however, the simpler method has never worked on large software development efforts [...]} \parencite[][]{Royce:1970aa}.
+
+Mittlerweile wird dieses Vorgehen für moderne Softwareprojekte kaum noch verwendet und aktuelle Literatur rät auch meist von der Verwendung des Modells ab.
+\parencite[Vgl.][S. 49]{Schatten:2010aa}
 
 \subsection{Spiralmodell}
 
+Das Spiralmodell ist ein iterative-inkrementelles, risikogetriebenes Vorgehensmodell.
+Dabei werden die Entwicklungsschritte zyklisch durchlaufen (vgl. \autoref{fig:spiralmodell}), bis das Endprodukt fertiggestellt ist.
+Entstanden ist das Modell aus dem Wasserfallmodell, welches angepasst für umfangreiche Regierungsprojekte verwendet wurde \parencite[][]{Boehm:1988aa}.
+\parencite[][S. 57]{Schatten:2010aa} identifiziert dabei die folgenden vier Schritte:
+
+\begin{itemize}
+\item Zieldefinition
+\item Risikoeinschätzung
+\item Testen
+\item Feedback und Planung der nächsten Iteration
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/spiralmodell.png}
+  \caption{Spiralmodell \parencite[][]{Boehm:1988aa}}
+  \label{fig:spiralmodell}
+\end{figure}
+
+Bei Betrachtung der Spirale (vgl. \autoref{fig:spiralmodell}) können zwei Dimensionen für den Projektfortschritt ausgemacht werden.
+Die Winkeldimension zeigt den Fortschritt einer einzelnen Iteration an, während die radiale Dimension die kumulierten Kosten bisher angibt.
+\parencite[][S. 65]{Boehm:1988aa}
+
+Geeignet ist das Spiralmodell für komplexe und langlaufende Projekte, bei denen sich die Anforderungen erst im Laufe der Entwicklung ergeben. 
+Dabei muss jedoch beachtet werden, dass eine Gesamtplanung über die Dauer des Projekts mit steigender Anzahl an Iterationen schwieriger wird. \parencite[][S. 58]{Schatten:2010aa}
+
+\subsubsection{Rational Unified Process (RUP)}
+
+RUP ist ein iterative-inkrementelles Vorgehensmodell mit den vier typischen Softwareentwicklungsphasen (vgl. \autoref{fig:rupmodell}):
+
+\begin{itemize}
+\item Konzeption
+\item Entwurf und Design
+\item Implementierung
+\item Deployment
+\end{itemize}
+
+Das Modell setzt stark auf die Verwendung von UML und eine Toolchain zur Unterstützung \parencite[vgl.][]{Kruchten:2002:TIR:581339.581455}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/rupmodell.png}
+  \caption{Rational Unified Process \parencite[][]{Kleuker:2011aa}}
+  \label{fig:rupmodell}
+\end{figure}
+
+Jede Phase kann nochmals in mehrere Iterationen aufgeteilt werden. 
+Diese werden solange wiederholt, bis ein zufriedenstellendes Ergebnis in dieser Phase erreicht wurde.
+In \autoref{fig:rupmodell} können die Aufwände in der jeweiligen Phase abgelesen werden. 
+Dabei ist ersichtlich, dass in jeder Phase die einzelnen Disziplinen unterschiedlich stark involviert sind.
+Dies kann als Vorteil gegenüber dem Wasserfallmodell gesehen werden, da so z. B. Anforderungsanalyse und Test das Projekt ständig begleiten, was die Änderungsfähigkeit des Projekts begünstigt.
+\parencite[][S. 60]{Schatten:2010aa} führt auf, dass insbesondere durch die Erzeugung einer Vielzahl von Dokumentation (UML etc.) die Flexibilität eingeschränkt ist.
+Hierbei sollte auch bedacht werden, dass insbesondere UML als komplex und schwergewichtig bezeichnet werden kann, was dem Modell nicht zuträglich ist.
+
 \subsubsection{V-Modell}
+
+Das V-Modell entstand durch das Bundesamt für Wehrtechnik aufgrund schlechter Erfahrungen mit anderen Vorgehensmodellen \parencite[vgl.][S. 1]{droschel2000v}.
+Das V illustriert dabei die beiden Phasen \emph{Konzeption} und \emph{Konstruktion}.
+In der Konzeptionsphase wird schrittweise das System spezifiziert und weiter verfeinert. 
+Dabei liefert jede Stufe gleichzeitig die Tests für die gegenüberliegende Konstruktionsstufe.
+Nach der Implementierung werden die Komponenten in der Konstruktionsphase stückweise integriert und getestet.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/vmodell.png}
+  \caption{V-Modell \parencite[][]{Kleuker:2011aa}}
+  \label{fig:vmodell}
+\end{figure}
+
+Es lassen sich aus den einzelnen Stufen verschiedene Systemsichten ableiten \parencite[vgl.][S. 50]{Schatten:2010aa}: 
+
+\begin{itemize}
+\item Anwendersicht (oberste Stufe)
+\item Architektursicht 
+\item Implementierungssicht
+\end{itemize}
+
+Das V-Modell ist ein sehr umfangreiches und komplexes Modell.
+Eine ausführliche, praxisorientierte Beschreibung findet sich in \parencite[][]{brohl1993v}.
+Insbesondere bei Projekten der öffentlichen Hand wird bzw. wurde das V-Modell gerne eingesetzt.
+Dies liegt in der meist recht stabilen Anforderungsspezifikation dieser Projekte begründet.
+\parencite[Vgl.][S. 52]{Schatten:2010aa}
 
 \subsubsection{V-Modell XT}
 
-\subsubsection{W-Modell}
+Durch Erweiterung des V-Modells entstand das V-Modell XT.
+Das Kürzel XT steht für \emph{Extreme Tailoring} und stellt den Fokus der Erweiterung klar: Modularität, Erweiterbarkeit und Anpassungsfähigkeit des Modells.
+Ziel ist es auch, die Kommunikation zwischen Auftraggeber und Auftragnehmer zu verbessern.
+Hierfür werden Vorgehensbausteine definiert, welche flexibel kombiniert werden können \parencite[vgl.][S. 222]{Broy:2005aa}.
 
-\subsubsection{IBM Rational Unified Process (RUP)}
+Das Modell ist ein Metamodell, welches den Auftragnehmer nicht zwangsläufig dazu zwingt, das Modell genau wie angegeben durchzuführen.
+Lediglich die zu liefernden Produkte in den einzelnen Phasen müssen entsprechend vorliegen.
+Somit kann das Modell als eine Art Schnittstelle zwischen Auftraggeber und -nehmer angesehen werden. \parencite[Vgl.][S. 126]{Kuhrmann:2008aa}
 
+Da, ähnlich wie beim V-Modell, sehr viel Dokumentation erzeugt wird, ist es von besonderer Wichtigkeit das Modell sehr gut anzupassen, um nicht unnötige Dokumente zu erzeugen. \parencite[vgl.][S. 39]{Kleuker:2011aa}
+
+Seit 2005 ist dieses Vorgehensmodell verpflichtend für alle IT-Projekte der deutschen Bundesbehörden. \parencite[Vgl.][]{Hohn:2008aa}
 
 \subsection{Agil} % 3 Seiten
 
-MANIFESTO!
+In diesem Abschnitt sollen einige agile Vorgehensmodelle vorgestellt werden.
+Der Grundgedanke dieser Modelle beruht auf dem agilen Manifest \parencite[][]{Beck:2001aa}:
 
-\parencite[Vgl.][S. XY]{6979143}  Da gibt es ein Bild. Vergleich Agile/Normal mit Management etc.
+\begin{quote}
+\enquote{
+Wir erschließen bessere Wege, Software zu entwickeln,
+indem wir es selbst tun und anderen dabei helfen.
+Durch diese Tätigkeit haben wir diese Werte zu schätzen gelernt:
+
+Individuen und Interaktionen mehr als Prozesse und Werkzeuge
+Funktionierende Software mehr als umfassende Dokumentation
+Zusammenarbeit mit dem Kunden mehr als Vertragsverhandlung
+Reagieren auf Veränderung mehr als das Befolgen eines Plans
+
+Das heißt, obwohl wir die Werte auf der rechten Seite wichtig finden,
+schätzen wir die Werte auf der linken Seite höher ein.
+}
+\end{quote}
+
+Ziel der agilen Vorgehensmodelle ist es, möglichst früh ein lauffähiges Inkrement zu erhalten, welches dem Kunden präsentiert werden kann. 
+Dadurch soll eine enge Kollaboration mit dem Kunden erzeugt werden, so dass Änderungen möglichst schnell umgesetzt werden können. \parencite[Vgl.][S. 62]{Schatten:2010aa}
+
+Erreicht werden sollen diese Verbesserungen durch die Reduzierung von unnötiger Dokumentation, enge Zusammenarbeit mit dem Kunden und einer Fokussierung auf der Generierung von Wert für den Kunden (in Form von Software).
 
 \subsubsection{Scrum}
 
+Scrum ist definiert als:
+\enquote{A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.}
+\parencite[][S. 3]{schwaber2011scrum}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/scrummodell.png}
+  \caption{Scrum \parencite[][]{Schatten:2010aa}}
+  \label{fig:scrummodell}
+\end{figure}
+
+\autoref{fig:scrummodell} visualisiert das Prinzip und den Ablauf von Scrum.
+Anforderungen werden in Form von User Stories im Product Backlog hinterlegt.
+Eine User Story beschreibt dabei ein kleines, vertikales Inkrement der Software, die dem Kunden einen Nutzen bringt.
+Die selbst organisierenden Teams wählen zu Beginn eines Sprints eine Anzahl von User Stories, die sie während der Dauer des Sprints (typischerweise 2-4 Wochen) implementieren.
+Am Ende eines Sprints werden die entwickelten Funktionen ausgeliefert und dem Kunden präsentiert.
+
+Durch die kleinen Teams und kurzen Sprints wird eine hohe Flexibilität bezüglich Änderungen und Reaktion auf Risiken erreicht.
+Außerdem wird der Managementaufwand reduziert, da sich die Teams selbst organisieren.
+Begleitet wird der Prozess durch einen Scrum Master, welcher hauptsächlich organisatorische Tätigkeiten ausführt und zwischen dem Kunden und dem Team vermittelt.
+
+So einfach das Prinzip von Scrum sein mag, so schwierig kann die Einführung in Unternehmen sein.
+Es muss unterschieden werden, welche konkrete Ausprägung von Scrum bereits im Unternehmen vorherrscht und welche Ausprägung erreicht werden soll.
+\parencite[][S. 3ff]{maximini2012scrum} beschreibt sechs Ausprägungen, die sich in der Tiefe und Nachhaltigkeit der Implementierung unterscheiden.
+Das untere Spektrum wird durch \emph{Scrum PRN} (Scrum nach Bedarf) abgedeckt, welches sich durch eine spontane, lokale Umsetzung von Scrum auszeichnet.
+Am anderen Ende des Sprektrums steht \emph{Nachhaltiges Tiefen-Scrum}.
+Hier tragen alle Mitarbeiter, die hoch motiviert sind, den Gedanken von Scrum in sich und treiben Veränderungen voran.
+
 \subsubsection{Kanban}
 
-\subsubsection{Extreme Programming}
+Kanban stammt aus dem japanischen und bedeutet \emph{Signalkarte}.
+Diese Technik stammt aus dem erfolgreichen Toyota-Produktionsprozess und stellt sicher, dass Ressourcen limitiert sind (z. B. kann ein Entwickler-Team nicht beliebig viele Features gleichzeitig umsetzen).
+Meist wird ein Kanban-Board eingesetzt, welches die verschiedenen Phasen der Entwicklung visualisiert.
+Dabei fließen Karten, ähnlich einer User Story, durch die Phasen des Boards.
+Ziel ist es, die Durchlaufrate dieser Karten zu maximieren.
+Erreicht wird dies durch eine Limitierung der Karten die sich gleichzeitig in den jeweiligen Phasen befinden können.
+Dadurch werden auch Engpässe deutlich, denn wenn sich in einer Phase die Karten stauen, müssen hier die Probleme analysiert werden.
 
-\subsubsection{SEAP}
+Kanban kann auch als \enquote{Wasserfallmodell im Kleinen} angesehen werden.
+Ein wichtiger Unterschied ist jedoch, dass bei Kanban stets kleine Inkremente durch die Entwicklungsphasen wandern, während beim Wasserfallmodell das ganze Projekt gleichzeitig durch die Phasen wandert.
+
+\parencite[][S. 54]{Epping:2011aa} identifiziert vier wesentliche Elemente des Kanban-Modells:
+
+\begin{itemize}
+\item Pull-Prinzip: Karten werden genommen, nicht gegeben
+\item Limitierte Ressourcen
+\item Transparenz: Einsicht des Projektstatus durch alle Beteiligten
+\item Kontinuierliche Verbesserung
+\end{itemize}
+
+\subsubsection{Extreme Programming (XP)}
+
+XP vereint einige der zuvor genannten agile Methoden und stellt eine Zusammenfassung bekannter Best Practices dar.
+Beschrieben wurde es von Kent Beck \parencite[][]{Beck:1999aa}, der explizit dazu rät, das Vorgehensmodell teilweise in einzelnen Aspekten eines Projekts einzuführen.
+Dies zeigt auch, dass XP kein formales Vorgehensmodell ist (vgl. V-Modell), sondern eine lose Sammlung von Methoden.
+Im Fokus von XP stehen dabei Projekte die sehr ungenaue Anforderungen haben und spät im Projektverlauf noch Änderungen erfahren.
+Eine grobe Beschreibung des Prozesses ist in \autoref{fig:xpmodell} ersichtlich. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/xpmodell.png}
+  \caption{XP Prozess \parencite[][]{Schatten:2010aa}}
+  \label{fig:xpmodell}
+\end{figure}
+
+Eine bekannte Praxis aus XP ist das sogenannte \emph{Pair Programming}, bei dem stets zwei Personen zusammen entwickeln.
+Dies fördert die Qualität des Quellcodes und erleichtert die Erstellung von qualitativ hochwertigen Tests.
+Des Weiteren kann die Abhängigkeit von einzelnen Entwicklern und die Bildung von Wissenskonzentration verringert werden, da sich das Wissen auf mehrere Personen verteilt.
+
+\subsubsection{Security-Enhanced Agile Software Development Process (SEAP)}
+
+\parencite[Vgl.][]{Baca:2015aa} stellt mit SEAP eine sicherheitsbezogene Erweiterung der agilen Vorgehensmodelle vor.
+
+Kennzeichnend ist die Einführung von den Rollen \emph{Security Manager}, \emph{Security Architect}, \emph{Security Master} und \emph{Penetration Tester}, die speziell auf sicherheitsrelevante Aspekte der Entwicklung ausgerichtet sind.
+Des Weiteren wird ein \emph{Risikoanalyseprozess} integriert.
+
+Aufgrund der kurzen Iterationszyklen in agilen Vorgehensmodellen und der spärlichen Dokumentation ist es schwierig den Überblick über die ganze Software zu erhalten.
+Dies wiederum erschwert die Sicherheits- und Risikoanalyse.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/seapmodell.png}
+  \caption{SEAP. Schlösser bedeuten sicherheitsrelevante Betrachtungen. \parencite[Vgl.][]{Baca:2015aa}}
+  \label{fig:seapmodell}
+\end{figure}
+
+sdfds (vgl. \autoref{fig:seapmodell}).
+
 
 \section{DevOps} % 3 Seiten
 Was ist DevOps?
