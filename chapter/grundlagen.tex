@@ -281,18 +281,39 @@ Dabei wird eine Branche als \emph{sicherheitskritisch} eingestuft, wenn die verw
 Die Verletzung dieser Ansprüche kann Verlust streng vertraulicher Daten, Gefahr für Leib und Leben oder negative Auswirkungen für die Umwelt zur Folge haben.
 Alle Branchen die hauptsächlich Software verwenden, die diesen Ansprüchen nicht genügen muss, werden unter dem Begriff \emph{klassische Branchen} zusammengefasst.
 
-\subsection{Time to Market}
+\subsection{Sicherheitsanspruch} % 1 Seite
+
+Die Bewertung von Bugs in Software hängt von der betrachteten Branche ab.
+Fehler in Software für klassische Branchen haben meist nur hohe monetäre Kosten.
+So haben beispielsweise die Viren MyDoom, SoBig.F, Slammer, etc., die Software Bugs ausgenutzt haben, weltweit einen finanziellen Schaden von mehreren Milliarden Euro verursacht. \parencite[Vgl.][]{ComputerEconomics2004aa}
+
+Dahingegen sind die Folgen von Fehlern in sicherheitskritischen Branchen weitaus schwerwiegender.
+\parencite[][]{Zhivich:2009aa} nennt mehrere große Ereignisse in sicherheitskritischen Branchen mit teilweise fatalen Folgen:
+
+Ein Berechnungsfehler durch Missachtung der beschränkten Präzision von Gleitkommaoperationen führte bei einem Patriot-Raketen-Abwehrsystem der US-Armee in Saudi-Arabien zum Tod von 28 Soldaten.
+Eine Scud-Rakete konnte aufgrund des Fehlers nicht abgefangen werden, da die Flugbahn der Rakete falsch bestimmt wurde.
+Ursache war einerseits der Berechnungsfehler, andererseits eine fehlerhafte Verwendung.
+Das System war für eine Betriebsdauer von 14 Stunden spezifiziert, wurde in Saudi-Arabien jedoch rund 100 Stunden ununterbrochen benutzt.
+Dadurch summierte sich der Berechnungsfehler auf und führte zu der fehlerhaften Flugbahnberechnung.
+
+Ein weiterer Vorfall ereignete sich im medizinischen Bereich.
+Durch eine Race-Condition in einem Bestrahlungsgerät wurden Krebspatienten mit der 100-fachen Dosis bestrahlt.
+Die Race-Condition konnte ausgelöst werden, wenn das Bedienpersonal am Gerät zu schnell verschiedene Tasten betätigte, was einen inkonsistenten Zustand zwischen Display und tatsächlichem Status zur Folge hatte.
+
+Auch Bedrohungen für die Infrastruktur können auftreten, wie ein Bruch einer Gas-Pipeline in den USA beweist.
+Zwar war der Hauptgrund ein physischer Defekt, jedoch hätte das Kontrollsystem dies anzeigen müssen.
+Aufgrund eines nicht näher genannten Fehlers war dies nicht der Fall und das Personal konnte den Fehler nicht rechtzeitig entdecken.
+Andernfalls hätte die Pipeline vorher abgeschaltet und der Tod von drei Menschen verhindert werden können.
+
+Diese Vorfälle zeigen deutlich, wie unterschiedlich die Anforderungen an die Sicherheit von Software in klassischen bzw. sicherheitskritischen Branchen sind.
 
 
-
-\subsection{Sicherheitsanspruch}
-
-\subsection{Normen}
+\subsection{Normen} % 2 Seiten
 
 Welche Normen existieren in kritischer SW?
 ISO Normen etc.
 
-\subsection{Risikomanagement}
+\subsection{Risikomanagement} % 1 Seite
 
 Wie können Risiken verwaltet werden und welche Anforderungen bestehen diesbezüglich? (Normen etc. ?)
 
