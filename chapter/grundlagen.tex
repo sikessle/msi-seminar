@@ -13,7 +13,7 @@ Im Fokus dieses Abschnitts steht die Erläuterung relevanter Vertreter dieser Ka
 
 Nachfolgend sollen einige wichtige klassische iterative als auch nicht-iterative Vorgehensmodelle kurz vorgestellt werden.
 
-\subsection{Wasserfallmodell}
+\subsubsection{Wasserfallmodell}
 
 Das Wasserfallmodell wird konzeptionell das erste mal in \parencite[][]{Royce:1970aa} beschrieben.
 Es beschreibt ein rein sequentielles Vorgehen in der Entwicklung (vgl. \autoref{fig:wasserfallmodell}). 
@@ -38,7 +38,7 @@ Dass dieses Modell für große Softwareprojekte meist wenig geeignet ist, wurde 
 Mittlerweile wird dieses Vorgehen für moderne Softwareprojekte kaum noch verwendet und aktuelle Literatur rät auch meist von der Verwendung des Modells ab.
 \parencite[Vgl.][S. 49]{Schatten:2010aa}
 
-\subsection{Spiralmodell}
+\subsubsection{Spiralmodell}
 
 Das Spiralmodell ist ein iterative-inkrementelles, risikogetriebenes Vorgehensmodell.
 Dabei werden die Entwicklungsschritte zyklisch durchlaufen (vgl. \autoref{fig:spiralmodell}), bis das Endprodukt fertiggestellt ist.
@@ -260,7 +260,7 @@ Das Entwicklungsteam steht während der Implementierung stets in enger Verbindun
 Während in normalen agilen Vorgehensmodellen eine Risikoanalyse pro Hauptrelease erfolgt, findet bei SEAP diese pro BUC statt.
 Dadurch wird eine inkrementelle Risikoanalyse erreicht, die sich besser in den agilen Kontext fügt.
 
-Die Security Group ist dabei integraler Bestandteil der agilen Entwicklung und kann die Auslieferung eines Inkrements bei Problemen mit der Sicherheit stoppen oder  verzögern. 
+Die Security Group ist dabei integraler Bestandteil der agilen Entwicklung und kann die Auslieferung eines Inkrements bei Problemen mit der Sicherheit stoppen oder verzögern. 
 Durch die enge Integration in das Entwicklungsteam steht den Entwicklern jederzeit ein kompetenter Ansprechpartner für Sicherheitsfragen zur Verfügung.
 Des Weiteren kann jederzeit auf neue Sicherheitsanforderungen reagiert werden.
 
@@ -287,7 +287,7 @@ Die Bewertung von Bugs in Software hängt von der betrachteten Branche ab.
 Fehler in Software für klassische Branchen haben meist nur hohe monetäre Kosten.
 So haben beispielsweise die Viren MyDoom, SoBig.F, Slammer, etc., die Software Bugs ausgenutzt haben, weltweit einen finanziellen Schaden von mehreren Milliarden Euro verursacht. \parencite[Vgl.][]{ComputerEconomics2004aa}
 
-Dahingegen sind die Folgen von Fehlern in sicherheitskritischen Branchen weitaus schwerwiegender.
+Dahingegen sind die Folgen von Fehlern in sicherheitskritischen Branchen weitaus schwerwiegender, denn beispielsweise Fehler in Satelliten können nicht einfach ausgebessert werden, diese müssen sofort fehlerfrei arbeiten.
 \parencite[][]{Zhivich:2009aa} nennt mehrere große Ereignisse in sicherheitskritischen Branchen mit teilweise fatalen Folgen:
 
 Ein Berechnungsfehler durch Missachtung der beschränkten Präzision von Gleitkommaoperationen führte bei einem Patriot-Raketen-Abwehrsystem der US-Armee in Saudi-Arabien zum Tod von 28 Soldaten.
@@ -307,20 +307,96 @@ Andernfalls hätte die Pipeline vorher abgeschaltet und der Tod von drei Mensche
 
 Diese Vorfälle zeigen deutlich, wie unterschiedlich die Anforderungen an die Sicherheit von Software in klassischen bzw. sicherheitskritischen Branchen sind.
 
-
 \subsection{Normen} % 2 Seiten
 
-Welche Normen existieren in kritischer SW?
-ISO Normen etc.
+In den klassischen Branchen existiert meist keine bindende Norm für die Unternehmen.
+Jedoch bietet die Norm DIN ISO/IEC 12119 einen Katalog an Anforderungen, der eine gewisse Qualität der Software garantiert.
+So wird z. B. auf Endlosschleifen, Abstürze, Bedienbarkeit, Benutzerdokumentation und korrekte Versionierung geprüft. 
+Eine weitere Norm die allgemeine Qualitätsanforderungen stellt ist die ISO 9001.
+Diese ist jedoch weniger auf das Endprodukt als auf die Entwicklung und Organisation ausgerichtet.
+\parencite[Vgl.][S. 66 - 67]{Hohler:1998aa}
 
-\subsection{Risikomanagement} % 1 Seite
 
-Wie können Risiken verwaltet werden und welche Anforderungen bestehen diesbezüglich? (Normen etc. ?)
+Für sicherheitskritische Branchen existieren einige spezielle Normen wie beispielsweise die ECSS-E-40 Norm der European Corporation on Space Standardization (ECSS).
+Vorläufer bzw. Basis der Norm ist ISO 12207.
+Hauptfokus der Norm ist die Definition von Prozessen und deren Beschreibung. 
+Die Norm beschreibt die Anforderungen und die erwarteten Eingabe und Ergebnisse der Prozesse.
 
-\section{Leistungskennzahlen} % 2 Seiten
+Dabei ist stets zu beachten, dass die Norm versucht möglichst flexibel zu sein und so ermöglicht, eigene Vorgehensweisen auf diese Norm zu übertragen bzw. anzupassen (\emph{tayloring}).
+Grundlegend ist das Lieferant-Kunden-Konzept, welches mehrstufig die involvierten Unternehmen im Entwicklungsprozess als Lieferant bzw. Kunde ansieht und die Austauschpunkte in Form von Reviews gestaltet.
+Die Prozesse umfassen:
+\begin{description}
+\item[System Engineering] Umfasst Systemanforderungsanalyse, -integration und -validierung. 
+Wird durch den Kunden ausgeführt.
+\item[Software Requirements Engineering] Erstellung einer Softwareanforderungsanalyse und eines Architekturdesign durch den Lieferanten.
+\item[Software Design Engineering] Implementierung, Testen, Integrieren und Validieren der Softwarekomponenten durch den Lieferanten.
+\item[Software Validation and Acceptance] Validierung gegen die Anforderungen, Deployment und Akzeptanztest.
+\item[Software Operations Engineering] Vorbereiten des Betriebs der Software, operationellen Tests und Benutzersupport.
+\item[Software Maintenance] Problemanalyse, Bugfixing, Migration und Abschaltung von Software.
+\end{description}
 
-Lines of Code, etc.
-siehe auch Paper für Space Companies..
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/ecss-dokumentation.png}
+  \caption{Dokumentationskategorien von ECSS-E-40 \parencite[][]{jones2002introducing}}
+  \label{fig:ecss-dok}
+\end{figure}
+Kennzeichnend ist die Maßgabe, dass sehr viel und ausführlich dokumentiert werden muss.
+Eine Vielzahl von Kategorien (vgl. \autoref{fig:ecss-dok}) zeigt die strengen Dokumentationsanforderungen.
+Der Standard legt Wert darauf, dass insbesondere die Anforderungen von Raumfahrtsoftware, wie begrenzte Ressourcen und gestiegene Komplexität möglichst gut abgedeckt werden.
+\parencite[Vgl.][]{jones2002introducing}
 
-KPIs..
-Bspw. Auswirkungen auf Projekt Management und soziale Faktoren
+Die Norm RTCA/DO-178B ist speziell für die Software in Flugzeugen definiert.
+Diese ebenfalls prozessorientierte Norm betrachtet auch externe Software (z. B. Entwicklungsumgebungen).
+Im Organisationsprozess wird die Anforderungsklasse der Software aus den Anforderungen an das Gesamtsystem abgeleitet, der Softwarelebenszyklus und die Dokumentation spezifiziert.
+
+Im Softwarelebenszyklus werden dabei die einzelnen Phasen während der Entwicklung und des Betriebs der Software beschrieben.
+Der Softwareentwicklungsprozess umfasst die Anforderungsanalyse, Implementierung, Integration und Validierung, wobei die Validierung Reviews, Analysen und Tests beinhaltet.
+Während der Reviews und Analysen wird geprüft, ob alle organisatorischen (Dokumentation etc.) und fachlichen (Algorithmen etc.) Anforderungen eingehalten wurden.
+
+Die Testphase erfordert das Durchführen von White-, Black-Box (mit Äquivalenzklassenbildung) und Integrationstests.
+Zusätzlich ist die Implementierung eines Konfigurationsmanagementprozesses erforderlich, um die Kombinationen von Software und Hardware zu verwalten.
+\parencite[Vgl.][S. 71ff]{Hohler:1998aa}
+
+Häufig in der Raumfahrt verwendet wird der Standard IEC 61508 Teil 7.
+Dieser beschreibt welche Methoden für die Raumfahrt und andere sicherheitskritische Bereiche geeignet sind.
+Der Fokus liegt wie bei den meisten anderen Normen auf eingebetteten Systemen.
+Abgeleitet von diesem Standard wurde RTCA/DO-178B.
+Ziel der Norm ist es, die Risiken während des Betriebs der Software zu minimieren.
+
+\subsection{Entwicklung} % 1-2 Seiten
+
+Sicherheitskritische Branchen setzen bei der Entwicklung üblicherweise auf ein sehr formales, geplantes Vorgehen.
+Frameworks helfen alle erforderlichen Prozesse und Zwischenprodukte zu durchlaufen bzw. zu generieren und verhindern.
+Ein weitere Vorteil von Frameworks, die dies unterstützen, ist, dass komplexe Software von mehreren Lieferanten in den Entwicklungsprozess eingebunden werden kann.
+Meist nutzen diese eigene Entwicklungsprozesse und Vorgehensmodelle.
+Durch ein Framework lassen sich diese über wohldefinierte Schnittstellen einbinden.
+Dies umfasst eine umfangreiche und exakte Dokumentation aller Softwareprodukte.
+
+Zusätzlich wird durch Redundanz versucht die Auswirkungen von Fehlern zu minimieren.
+So könnte ein zweites Steuerungssystem in einem Flugzeug Leben retten, wenn das erste aufgrund eines Hardware- oder seltenen Softwaredefekts ausfällt.
+Auch die Wiederverwendung von Komponenten spielt in diesen hochspezialisierten Bereichen eine geringere Bedeutung, während in klassischen Branchen oft Wert auf Wiederverwendung gelegt wird, um neue Produkte schneller und günstiger herstellen zu können.
+\parencite[Vgl.][S. 39]{Carpenter:2014aa}
+
+Auch bezüglich der Vorgehensmodelle sind sicherheitskritische Branchen wesentlich konservativer eingestellt.
+Um den Anspruch einer umfangreichen Dokumentation zu erfüllen wird meist auf klassische Vorgehensmodelle gesetzt.
+\parencite[Vgl.][S. 39]{Carpenter:2014aa}
+
+Die Best Practices für Raumfahrtentwicklung \parencite[vgl.][]{Hersman:2010aa} zeigen den starken Formalismus in der Entwicklung auf.
+Geprägt durch eine Vielzahl an Normen, Zertifizierungen und Prozessen wird auf die besonderen Anforderungen dieser Branche Rücksicht genommen.
+
+Dem gegenüber steht ein weniger formales, flexibleres Vorgehen in den klassischen Branchen. 
+Als Grund lassen sich kürzere Entwicklungszeiten, hoher Wettbewerbsdruck und niedrigere Risiken identifizieren.
+
+
+\section{Time to Market} % 1/2 Seite
+
+In der Raumfahrtindustrie sind die Entwicklungszeiten wesentlich länger im Vergleich zu klassischen Branchen.
+Die Projektplanung bzw. die Einhaltung des Plans habe in diesen Branchen das größte Gewicht. 
+Hier gilt es, möglichst schnell unter Zeitdruck vor den Mitbewerbern ein lauffähiges Produkt auszuliefern.
+Dabei belaufen sich die Entwicklungszeiten meist auf wenige Monate bis Jahre (selten).
+Dahingegen sind in der Raumfahrtindustrie lange Laufzeiten von mehreren Jahren der Regelfall.
+Des Weiteren ist der Schwerpunkt mehr auf Qualität und Funktionsumfang gesetzt, was sich auch in einem erhöhten Bürokratieaufwand niederschlägt.
+\parencite[Vgl.][S. 97]{Dorfman:1999aa}
+
+
