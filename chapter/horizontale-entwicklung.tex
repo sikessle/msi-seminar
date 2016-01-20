@@ -110,22 +110,54 @@ Zwar wird die Einführung von agilen Methoden als wichtige strategische Entschei
 
 Dieser Abschnitt soll die Frage klären, wie agile Vorgehensmodelle u.a. in der Luft- und Raumfahrtindustrie etabliert werden und welche Vor- und Nachteile dadurch entstehen können.
 
-\subsection{Anpassungen der Vorgehensmodelle}
+\subsection{Anpassungen der Vorgehensmodelle} 
 
-\subsubsection{SEAP}
+Nachfolgend wird gezeigt, wie agile Vorgehensmodelle angepasst werden können, um den erhöhten Anforderungen der sicherheitskritischen Branchen Rechnung zu tragen.
 
-\subsubsection{ECSS}
+\subsubsection{SEAP} % 1 Seite
 
-\subsubsection{Extreme Programming}
+Mit einem Fokus auf kosteneffiziente Prozesse und Tools integriert SEAP (vgl. \autoref{sec:seap}) sicherheitsrelevante Überlegeungen in agile Vorgehensmodelle.
+\parencite[][]{Baca:2015aa} untersucht die Einführung von SEAP bei Ericsson AB in einem Geldtransfersystem und evaluiert die Ergebnisse.
+Ericsson benutzt ein martkgetriebenes Entwicklungsmodell, bei dem die Requriements von einer Vielzahl an Kunden gesammelt werden.
+Des Weiteren bestehen die Anforderungen an das Geldtransfersystem in einem sehr hohen Sicherheitsanspruch und einer länderspezifischen Anpassung.
 
-\subsubsection{Abuser Stories}
+Nach der Einführung von SEAP konnten bei Ericsson mehrere Verbesserungen gemessen wurden.
+So verbesserte sich die Anzahl der erkannten, schweren Risiken deutlich. 
+Das heißt, die Grundvoraussetzung, das Erkennen von Risiken, wurde alleine durch SEAP signifikant verbessert.
+Darauf aufbauend wurde analysiert, wie viele der erkannten Risiken verhindert wurden.
+Die Anzahl der beseitigten Risiken wurde um 54 \% erhöht.
+Außerdem konnte die Anzahl der Risiken, die auf die nächste Version verschoben wurden, konnte um 27 \% verringert werden.
+Zusätzlich wurde eine Reduktion der Anzahl der nicht beseitigen Risiken um 29 \% erreicht.
+Trotz dieser Verbesserungen konnte eine Verringerung der Mannstunden pro identifiziertem Risiko um 45 \% auf 1,48 h erreicht werden.
+Außerdem wurde der Prozess der Identifizierung der Risiken verbessert werden, so dass nur noch ca. 1,7 h anstatt 21,6 h nötig sind.
+\parencite[Vgl.][S. 17 ff.]{Baca:2015aa}
+
+\subsubsection{Requirements Engineering} % 1/2 Seite
+
+\parencite[][]{peeters2005agile} stellt einige Erweiterungen für das Requirements Engineering in agilen Prozessen vor.
+So werden die User Stories um sogenannte \emph{Abuser Stories} ergänzt.
+Eine Abuser Story ähnelt formal einer User Story, beschreibt jedoch wie ein Angreifer das System missbrauchen kann, um an Daten o.ä. zu kommen.
+Gegenüber einer User Story wird eine Abuser Story nicht über den Wertbeitrag priorisiert, sondern über das potentielle Risiko und dem Schaden durch den Angriff.
+Dabei wird einerseits der potentielle Schaden, andererseits die Eintrittswahrscheinlichkeit zur Berechnung herangezogen.
+Eine Abuser Story sollte, bei Bezug zu einer User Story, Kosten in gleicher Höhe wie der Wertbeitrag der User Story besitzen.
+Dadurch kann die Abuser Story als Umkehrfunktion betrachtet werden, die den Wertbeitrag der User Story wieder vernichtet, wenn das Szenario eintritt.
+
+Die Aufwandsschätzung einer Abuser Story bezieht sich dabei auf den Aufwand, der nötig ist, um das System gegen den Angriff zu schützen.
+Eine \emph{Widerlegung} ist das Gegenstück zu einem Test. 
+Sie zeigt, dass durch die getroffenen Gegenmaßnahmen der Angriff nicht mehr möglich ist bzw. die Wahrscheinlichkeit auf ein erträgliches Maß reduziert wurde.
+
+Diese Ergänzung des agilen Modells, stellt eine einfache Art dar, die Requirements Engineering Phase durch Sicherheitsbetrachtungen zu ergänzen, ohne die grundlegenden agilen Abläufe maßgeblich zu verändern.
+
+\subsubsection{ECSS} % 1 Seite 
+
+\subsubsection{Extreme Programming} % 1 Seite
+
+\subsubsection{Abuser Stories} % 1/2 Seite
+
 
 
 \subsection{Kompatibilität mit Normen}
 
-
-
-\subsection{Auswirkungen aus Kundensicht} ?
 
 
 
