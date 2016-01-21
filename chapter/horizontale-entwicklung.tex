@@ -108,13 +108,9 @@ Zwar wird die Einführung von agilen Methoden als wichtige strategische Entschei
 \newpage
 \section{Agile Vorgehensmodelle in sicherheitskritischen Branchen} % 4 Seiten
 
-Dieser Abschnitt soll die Frage klären, wie agile Vorgehensmodelle u.a. in der Luft- und Raumfahrtindustrie etabliert werden und welche Vor- und Nachteile dadurch entstehen können.
+Dieser Abschnitt soll die Frage klären, wie agile Vorgehensmodelle u.a. in der Luft- und Raumfahrtindustrie etabliert werden können und welche Änderungen an den Modellen nötig sind.
 
-\subsection{Anpassungen der Vorgehensmodelle} 
-
-Nachfolgend wird gezeigt, wie agile Vorgehensmodelle angepasst werden können, um den erhöhten Anforderungen der sicherheitskritischen Branchen Rechnung zu tragen.
-
-\subsubsection{SEAP} % 1 Seite
+\subsection{SEAP} 
 
 Mit einem Fokus auf kosteneffiziente Prozesse und Tools integriert SEAP (vgl. \autoref{sec:seap}) sicherheitsrelevante Überlegeungen in agile Vorgehensmodelle.
 \parencite[][]{Baca:2015aa} untersucht die Einführung von SEAP bei Ericsson AB in einem Geldtransfersystem und evaluiert die Ergebnisse.
@@ -126,13 +122,12 @@ So verbesserte sich die Anzahl der erkannten, schweren Risiken deutlich.
 Das heißt, die Grundvoraussetzung, das Erkennen von Risiken, wurde alleine durch SEAP signifikant verbessert.
 Darauf aufbauend wurde analysiert, wie viele der erkannten Risiken verhindert wurden.
 Die Anzahl der beseitigten Risiken wurde um 54 \% erhöht.
-Außerdem konnte die Anzahl der Risiken, die auf die nächste Version verschoben wurden, konnte um 27 \% verringert werden.
+Außerdem konnte die Anzahl der Risiken, die auf die nächste Version verschoben wurden, um 27 \% verringert werden.
 Zusätzlich wurde eine Reduktion der Anzahl der nicht beseitigen Risiken um 29 \% erreicht.
 Trotz dieser Verbesserungen konnte eine Verringerung der Mannstunden pro identifiziertem Risiko um 45 \% auf 1,48 h erreicht werden.
 Außerdem wurde der Prozess der Identifizierung der Risiken verbessert werden, so dass nur noch ca. 1,7 h anstatt 21,6 h nötig sind.
-\parencite[Vgl.][S. 17 ff.]{Baca:2015aa}
 
-\subsubsection{Requirements Engineering} % 1/2 Seite
+\subsection{Abuser Stories} 
 
 \parencite[][]{peeters2005agile} stellt einige Erweiterungen für das Requirements Engineering in agilen Prozessen vor.
 So werden die User Stories um sogenannte \emph{Abuser Stories} ergänzt.
@@ -148,15 +143,120 @@ Sie zeigt, dass durch die getroffenen Gegenmaßnahmen der Angriff nicht mehr mö
 
 Diese Ergänzung des agilen Modells, stellt eine einfache Art dar, die Requirements Engineering Phase durch Sicherheitsbetrachtungen zu ergänzen, ohne die grundlegenden agilen Abläufe maßgeblich zu verändern.
 
-\subsubsection{ECSS} % 1 Seite 
+\subsection{Extreme Programming}
 
-\subsubsection{Extreme Programming} % 1 Seite
+Da Sicherheit eine Anforderung ist, die bereits von Anfang berücksichtigt werden muss und nicht nachträglich hinzugefügt werden kann, stellt sich die Frage, in wie fern Extreme Programming diesen Aspekt berücksichtigt.
+Die folgenden Betrachtungen stützen sich auf \parencite[][S. 8 ff.]{Wayrynen:2004aa}.
 
-\subsubsection{Abuser Stories} % 1/2 Seite
+Bei Betrachtung des Vorgehensmodells wird klar, dass XP standardmäßig keine Unterstützung für nicht-funktionale Anforderungen bietet.
+Da Benutzer meist auf funktionale Anforderungen fixiert sind, muss XP um eine Möglichkeit erweitert werden, diesen Benutzern bezüglich der Spezifikation von sicherheitsrelevanten nicht-funktionalen Anforderungen zu helfen.
+Durch Bildung eines Kundenteams mit einem Sicherheitsexperten, anstatt nur einem einzigen Kunden, der beim Entwicklerteam vor Ort ist, könnte dieses Wissen in die Spezifikation miteinfließen.
+Dadurch könnte eine Sicherheitsanalyse und Risikobewertung fachgerecht erfolgen.
+
+Des Weiteren erfordern sicherheitskritische Branchen ein gewisses Zusicherungsniveau bezüglich der Vermeidung von Risiken.
+Mit umfangreicher Dokumentation wird dies glaubhaft nachgewiesen.
+Dem gegenüber steht jedoch der Anspruch wenig Dokumentation bei XP zu erzeugen.
+Hier müsste also die Methodik angepasst werden, so dass aus Sicht des Entwicklers unnötige Dokumentation trotzdem generiert wird.
+Andererseits kann das Pair-Programming und automatisierte Tests als eine Art von Zusicherung angesehen werden.
+Jedoch ist es fraglich, ob dies unabhängigen Audits standhält.
+
+Zusammenfassend muss festgestellt werden, dass XP noch stark angepasst werden muss.
+Insbesondere die Spezifikation von Sicherheitsanforderungen, der Aufbau von eines Zusicherungsniveaus und das Etablieren von Tests als eine Form der Verifikation müssen durch Prozesse besser abgedeckt werden.
+
+\subsection{Scrum} 
+
+Insbesondere in der Raumfahrtindustrie ergeben sich in letzter Zeit einige Änderungen bezüglich der Marktsituation.
+Durch Eintritt von privaten Unternehmen, in den zuvor von staatlichen Einrichtungen kontrollierten Markt der Raumfahrt, ergeben sich neue Anforderungen an die Vorgehensmodelle.
+Die bisher klassischen Vorgehensmodelle müssen angepasst werden, um gegen die stetig größer werdende Anzahl an Mittbewerbern bestehen zu können.
+
+Raumfahrtsysteme haben meist sowohl plangetrieben als auch agile Komponenten.
+Deshalb bieten sich hybride Vorgehensmodelle dafür an.
+Boeing, Nokia und Daimer-Chrysler setzen beispielsweise auf solche Vorgehensmodelle.
+Dabei sollten agile Methoden insbesondere bei Prozessen zum Einsatz kommen, bei denen es darum geht, \emph{was} und nicht \emph{wie} etwas getan wird.
+So bieten sich die agilen Methoden an, wenn neues Wissen generiert werden muss. 
+Dahingegen können bei routinemäßigen Aufgaben die etablierten formalen Vorgehensmethoden verwendet werden.
+
+Einige Scrum-Komponenten müssen jedoch verworfen werden.
+Sich ändernde Requirements, minimale Dokumentaion und Refactoring sind für die Raumfahrtindustrie nicht geeignet.
+Dem gegenüber passt die testgetriebene Entwicklung und Scrum als Gesamtes sehr gut in dieses Umfeld.
+Durch die strikten Sicherheitsanforderungen ist die testgetriebene Entwicklung ein sich anbietendens Konzept.
+Genauso bietet sich aufgrund der Komplexität der Software Pair-Programming an.
+
+Den sozialen Faktor betreffend sind die täglichen Meetings eine gut passende Methode von Scrum, um die Kommunikation im Team zu verbessern.
+Insbesondere bei sehr technischen und komplexen Aufgaben stellt diese Methode sicher, dass alle Beteiligten ein gemeinsames Verständnis entwickeln.
+Die Sprint-Dauer könnte an das Projekt angepasst und eventuell etwas länger als gewöhnlich gewählt werden.
+Aufträge an Sub-Lieferanten könnten mit Scrum sehr gut als übergeordente Managementmethode verwaltet werden.
+
+Teams die sich häufig neu zusammensetzen oder geographisch verteilt sind, könnten sich als problematisch erweisen, da unter Umständen eine Kultur gefördert wird, die Risiken und Probleme nicht ausreichend kommuniziert.
+Auch muss Scrum dahingegen angepasst werden, dass Leistungsanforderungen explizit und möglichst früh spezifiziert werden.
+Durch Scrum kann auf kritische Probleme sehr gut reagiert werden, da durch den Kunde stetig Rückmeldung und eine Priorisierung erfolgt.
+\parencite[Vgl.][]{Carpenter:2014aa}
+
+\subsection{Kompatibilität mit Normen} % 1 Seite
+
+\parencite[][]{Theunissen:2003:SAS:954014.954034} verweist darauf, dass agile Vorgehensmodelle durchaus die Norm ISO 12207 erfüllen können.
+Es wird erkannt, dass es wichtig ist, trotz Erfüllung der Norm die Kernaussagen der agilen Methoden (Software anstatt übermäßiger Dokumentation) nicht aus den Augen zu verlieren.
+Dies soll nicht bedeuten, auf Dokumentation komplett zu verzichten, sondern lediglich den Fokus auf die Softwareentwicklung zu legen und nur in den Bereichen, in denen es erforderlich ist, die nötige Dokumentation zu erzeugen.
+Beispielsweise kann dies als eine Anforderung ausgedrückt werden und somit in die Systemspezifikation integriert werden.
+Hier bietet sich auch ein Optimierungspotential, in dem Dokumentation, wo möglich, automatisiert generiert wird.
+Dabei sollte jedoch als ultimative Quelle der Quellcode dienen, denn dieser stellt die exakteste \enquote{Dokumentation} dar.
+Möglicherweise müssen dann gewissen Code-Standards definert und implementiert werden.
+
+Auf der Norm ISO 12207 aufbauend ist auch die Norm der ECSS grundsätzlich kompatibel zu agilen Methoden.
+Eine Fallstudie bei der Swedish Space Corporation (SSC) untermauert diese Aussage \parencite[Vgl.][S. 1]{Ahmad:2010:ESC:1890810.1890816}.
+Durch die Norm wird dem Lieferanten keine Vorgehensmodell vorgeschrieben.
+Die starke Kollaboration zwischen Lieferant und Kunde passt sehr gut zu den agilen Methoden.
+Kunden definieren bei funktionale und nicht-funktionale (Leistungs-) Anforderungen für den Lieferanten.
+Das rekursive Kunden-Lieferanten-Konzept lässt sich mit Scrum abbilden und die einzelnen Prozesse, die in der Norm definiert sind können durch agile Methoden abgebildet werden (vgl. \autoref{tab:ecss_mapping}).
+
+\begin{table}[h]
+\center
+\caption{ECSS Prozesse und agile Methoden bei SSC \parencite[in Anlehnung an][S. 5]{Ahmad:2010:ESC:1890810.1890816}.}
+\label{tab:ecss_mapping}
+\begin{tabularx}{\textwidth}{p{6cm}|X}
+ECSS Prozess & agile Methode\\
+\hline
+\hline
+Software Management Process & Entwicklung eines Softwareentwicklungsplans, der Scrum für jedes Projekt vorschreibt.\\
+\hline
+Software Engineering Process & Sprintplanung bei Beginn des Sprints und testgetriebene Entwicklung als Entwicklungsmethode.\\
+\hline
+Software Verification and Validation Process & Häufige Review-Meetings in Scrum und testgetrieben Entwicklung stellen die Prozessverifikation sicher und minimieren Probleme.\\
+\hline
+Assurance Program Implementation & Sprintplanungs-Meeting, tägliche Meetings und die Retrospektive helfen bei der Implementierung.\\
+\hline
+Software Process Assurance & Durch tägliche Meetings und häufige Retrospektiven.\\
+\hline
+Software Product Quality Assurance & Häufige Retrospektiven identifizieren Erfolgsfaktoren und Fehlschläge.\\
+\end{tabularx}
+\end{table}
+
+Schließlich sollte die Norm ständig aktuell gehalten werden, um auf geänderte Anforderungen der Industrie und gelebte Praxis zu reagieren.
+ECSS ist sehr flexibel und lässt viele Freiheiten, sofern die Qualität hoch ist und gewisse Anforderungen im Vorgehensmodell eingehalten werden.
 
 
 
-\subsection{Kompatibilität mit Normen}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
