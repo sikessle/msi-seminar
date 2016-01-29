@@ -235,36 +235,6 @@ Eine bekannte Praxis aus XP ist das sogenannte \emph{Pair Programming}, bei dem 
 Dies fördert die Qualität des Quellcodes und erleichtert die Erstellung von qualitativ hochwertigen Tests.
 Des Weiteren kann die Abhängigkeit von einzelnen Entwicklern und die Bildung von Wissenskonzentration verringert werden, da sich das Wissen auf mehrere Personen verteilt.
 
-\subsubsection{Security-Enhanced Agile Software Development Process (SEAP)} \label{sec:seap}
-
-\parencite[][]{Baca:2015aa} stellt mit SEAP eine sicherheitsbezogene Erweiterung der agilen Vorgehensmodelle vor.
-
-Kennzeichnend ist die Einführung von den Rollen \emph{Security Manager}, \emph{Security Architect}, \emph{Security Master} und \emph{Penetration Tester}, die speziell auf sicherheitsrelevante Aspekte der Entwicklung ausgerichtet sind und als \emph{Security Group} zusammengefasst werden.
-Des Weiteren wird ein \emph{Risikoanalyseprozess} integriert.
-
-Aufgrund der kurzen Iterationszyklen in agilen Vorgehensmodellen und der spärlichen Dokumentation ist es schwierig den Überblick über die ganze Software zu erhalten.
-Dies wiederum erschwert die Sicherheits- und Risikoanalyse.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{img/seapmodell.png}
-  \caption{SEAP. Schlösser bedeuten sicherheitsrelevante Betrachtungen. \parencite[Vgl.][]{Baca:2015aa}}
-  \label{fig:seapmodell}
-\end{figure}
-
-SEAP löst dieses Problem, indem es sicherheitsrelevante Betrachtungen enger an die agilen Teilprozesse bindet (vgl. \autoref{fig:seapmodell}).
-Ein \emph{Business Oportunity Proposal (BOP)} ist die Beschreibung von neuer Funktionalität.
-Diese wiederum besteht aus mehreren \emph{Business Use Cases (BUC)}, welche die Anforderungen zur Erfüllung des BOP beschreiben.
-Aus den BUCs werden dann feingranulare User Stories generiert.
-Das Entwicklungsteam steht während der Implementierung stets in enger Verbindung mit der Security Group, die eine Risikoanalyse durchführt und entsprechend dem potentiellen Risiko angemessene Sicherheitsvorkehrungen trifft.
-Während in normalen agilen Vorgehensmodellen eine Risikoanalyse pro Hauptrelease erfolgt, findet bei SEAP diese pro BUC statt.
-Dadurch wird eine inkrementelle Risikoanalyse erreicht, die sich besser in den agilen Kontext fügt.
-
-Die Security Group ist dabei integraler Bestandteil der agilen Entwicklung und kann die Auslieferung eines Inkrements bei Problemen mit der Sicherheit stoppen oder verzögern. 
-Durch die enge Integration in das Entwicklungsteam steht den Entwicklern jederzeit ein kompetenter Ansprechpartner für Sicherheitsfragen zur Verfügung.
-Des Weiteren kann jederzeit auf neue Sicherheitsanforderungen reagiert werden.
-
-
 \section{DevOps} % 3 Seiten
 Was ist DevOps?
 

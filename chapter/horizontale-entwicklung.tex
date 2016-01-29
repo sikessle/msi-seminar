@@ -110,9 +110,85 @@ Zwar wird die Einführung von agilen Methoden als wichtige strategische Entschei
 
 Dieser Abschnitt soll die Frage klären, wie agile Vorgehensmodelle u.a. in der Luft- und Raumfahrtindustrie etabliert werden können und welche Änderungen an den Modellen nötig sind.
 
-\subsection{SEAP} 
+\subsection{Scrum} 
 
-Mit einem Fokus auf kosteneffiziente Prozesse und Tools integriert SEAP (vgl. \autoref{sec:seap}) sicherheitsrelevante Überlegeungen in agile Vorgehensmodelle.
+Insbesondere in der Raumfahrtindustrie ergeben sich in letzter Zeit einige Änderungen bezüglich der Marktsituation.
+Durch Eintritt von privaten Unternehmen, in den zuvor von staatlichen Einrichtungen kontrollierten Markt der Raumfahrt, ergeben sich neue Anforderungen an die Vorgehensmodelle.
+Die bisher klassischen Vorgehensmodelle müssen angepasst werden, um gegen die stetig größer werdende Anzahl an Mittbewerbern bestehen zu können.
+
+Raumfahrtsysteme haben meist sowohl plangetrieben als auch agile Komponenten.
+Deshalb bieten sich hybride Vorgehensmodelle dafür an.
+Boeing, Nokia und Daimer-Chrysler setzen beispielsweise auf solche Vorgehensmodelle.
+Dabei sollten agile Methoden insbesondere bei Prozessen zum Einsatz kommen, bei denen es darum geht, \emph{was} und nicht \emph{wie} etwas getan wird.
+So bieten sich die agilen Methoden an, wenn neues Wissen generiert werden muss. 
+Dahingegen können bei routinemäßigen Aufgaben die etablierten formalen Vorgehensmethoden verwendet werden.
+
+Einige Scrum-Komponenten müssen jedoch verworfen werden.
+Sich ändernde Requirements, minimale Dokumentaion und Refactoring sind für die Raumfahrtindustrie nicht geeignet.
+Dem gegenüber passt die testgetriebene Entwicklung und Scrum als Gesamtes sehr gut in dieses Umfeld.
+Durch die strikten Sicherheitsanforderungen ist die testgetriebene Entwicklung ein sich anbietendens Konzept.
+Genauso bietet sich aufgrund der Komplexität der Software Pair-Programming an.
+
+Den sozialen Faktor betreffend sind die täglichen Meetings eine gut passende Methode von Scrum, um die Kommunikation im Team zu verbessern.
+Insbesondere bei sehr technischen und komplexen Aufgaben stellt diese Methode sicher, dass alle Beteiligten ein gemeinsames Verständnis entwickeln.
+Die Sprint-Dauer könnte an das Projekt angepasst und eventuell etwas länger als gewöhnlich gewählt werden.
+Aufträge an Sub-Lieferanten könnten mit Scrum sehr gut als übergeordente Managementmethode verwaltet werden.
+
+Teams die sich häufig neu zusammensetzen oder geographisch verteilt sind, könnten sich als problematisch erweisen, da unter Umständen eine Kultur gefördert wird, die Risiken und Probleme nicht ausreichend kommuniziert.
+Auch muss Scrum dahingegen angepasst werden, dass Leistungsanforderungen explizit und möglichst früh spezifiziert werden.
+Durch Scrum kann auf kritische Probleme sehr gut reagiert werden, da durch den Kunde stetig Rückmeldung und eine Priorisierung erfolgt.
+\parencite[Vgl.][]{Carpenter:2014aa}
+
+\subsection{Extreme Programming}
+
+Da Sicherheit eine Anforderung ist, die bereits von Anfang berücksichtigt werden muss und nicht nachträglich hinzugefügt werden kann, stellt sich die Frage, in wie fern Extreme Programming diesen Aspekt berücksichtigt.
+Die folgenden Betrachtungen stützen sich auf \parencite[][S. 8 ff.]{Wayrynen:2004aa}.
+
+Bei Betrachtung des Vorgehensmodells wird klar, dass XP standardmäßig keine Unterstützung für nicht-funktionale Anforderungen bietet.
+Da Benutzer meist auf funktionale Anforderungen fixiert sind, muss XP um eine Möglichkeit erweitert werden, diesen Benutzern bezüglich der Spezifikation von sicherheitsrelevanten nicht-funktionalen Anforderungen zu helfen.
+Durch Bildung eines Kundenteams mit einem Sicherheitsexperten, anstatt nur einem einzigen Kunden, der beim Entwicklerteam vor Ort ist, könnte dieses Wissen in die Spezifikation miteinfließen.
+Dadurch könnte eine Sicherheitsanalyse und Risikobewertung fachgerecht erfolgen.
+
+Des Weiteren erfordern sicherheitskritische Bereiche ein gewisses Zusicherungsniveau bezüglich der Vermeidung von Risiken.
+Mit umfangreicher Dokumentation wird dies glaubhaft nachgewiesen.
+Dem gegenüber steht jedoch der Anspruch wenig Dokumentation bei XP zu erzeugen.
+Hier müsste also die Methodik angepasst werden, so dass aus Sicht des Entwicklers unnötige Dokumentation trotzdem generiert wird.
+Andererseits kann das Pair-Programming und automatisierte Tests als eine Art von Zusicherung angesehen werden.
+Jedoch ist es fraglich, ob dies unabhängigen Audits standhält.
+
+Zusammenfassend muss festgestellt werden, dass XP noch stark angepasst werden muss.
+Insbesondere die Spezifikation von Sicherheitsanforderungen, der Aufbau von eines Zusicherungsniveaus und das Etablieren von Tests als eine Form der Verifikation müssen durch Prozesse besser abgedeckt werden.
+
+\subsection{Security-Enhanced Agile Software Development Process (SEAP)} \label{sec:seap}
+
+\parencite[][]{Baca:2015aa} stellt mit SEAP eine sicherheitsbezogene Erweiterung der agilen Vorgehensmodelle vor.
+
+Kennzeichnend ist die Einführung von den Rollen \emph{Security Manager}, \emph{Security Architect}, \emph{Security Master} und \emph{Penetration Tester}, die speziell auf sicherheitsrelevante Aspekte der Entwicklung ausgerichtet sind und als \emph{Security Group} zusammengefasst werden.
+Des Weiteren wird ein \emph{Risikoanalyseprozess} integriert.
+
+Aufgrund der kurzen Iterationszyklen in agilen Vorgehensmodellen und der spärlichen Dokumentation ist es schwierig den Überblick über die ganze Software zu erhalten.
+Dies wiederum erschwert die Sicherheits- und Risikoanalyse.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{img/seapmodell.png}
+  \caption{SEAP. Schlösser bedeuten sicherheitsrelevante Betrachtungen. \parencite[Vgl.][]{Baca:2015aa}}
+  \label{fig:seapmodell}
+\end{figure}
+
+SEAP löst dieses Problem, indem es sicherheitsrelevante Betrachtungen enger an die agilen Teilprozesse bindet (vgl. \autoref{fig:seapmodell}).
+Ein \emph{Business Oportunity Proposal (BOP)} ist die Beschreibung von neuer Funktionalität.
+Diese wiederum besteht aus mehreren \emph{Business Use Cases (BUC)}, welche die Anforderungen zur Erfüllung des BOP beschreiben.
+Aus den BUCs werden dann feingranulare User Stories generiert.
+Das Entwicklungsteam steht während der Implementierung stets in enger Verbindung mit der Security Group, die eine Risikoanalyse durchführt und entsprechend dem potentiellen Risiko angemessene Sicherheitsvorkehrungen trifft.
+Während in normalen agilen Vorgehensmodellen eine Risikoanalyse pro Hauptrelease erfolgt, findet bei SEAP diese pro BUC statt.
+Dadurch wird eine inkrementelle Risikoanalyse erreicht, die sich besser in den agilen Kontext fügt.
+
+Die Security Group ist dabei integraler Bestandteil der agilen Entwicklung und kann die Auslieferung eines Inkrements bei Problemen mit der Sicherheit stoppen oder verzögern. 
+Durch die enge Integration in das Entwicklungsteam steht den Entwicklern jederzeit ein kompetenter Ansprechpartner für Sicherheitsfragen zur Verfügung.
+Des Weiteren kann jederzeit auf neue Sicherheitsanforderungen reagiert werden.
+
+Mit einem Fokus auf kosteneffiziente Prozesse und Tools integriert SEAP sicherheitsrelevante Überlegeungen in agile Vorgehensmodelle.
 \parencite[][]{Baca:2015aa} untersucht die Einführung von SEAP bei Ericsson AB in einem Geldtransfersystem und evaluiert die Ergebnisse.
 Ericsson benutzt ein martkgetriebenes Entwicklungsmodell, bei dem die Requriements von einer Vielzahl an Kunden gesammelt werden.
 Des Weiteren bestehen die Anforderungen an das Geldtransfersystem in einem sehr hohen Sicherheitsanspruch und einer länderspezifischen Anpassung.
@@ -142,55 +218,6 @@ Eine \emph{Widerlegung} ist das Gegenstück zu einem Test.
 Sie zeigt, dass durch die getroffenen Gegenmaßnahmen der Angriff nicht mehr möglich ist bzw. die Wahrscheinlichkeit auf ein erträgliches Maß reduziert wurde.
 
 Diese Ergänzung des agilen Modells, stellt eine einfache Art dar, die Requirements Engineering Phase durch Sicherheitsbetrachtungen zu ergänzen, ohne die grundlegenden agilen Abläufe maßgeblich zu verändern.
-
-\subsection{Extreme Programming}
-
-Da Sicherheit eine Anforderung ist, die bereits von Anfang berücksichtigt werden muss und nicht nachträglich hinzugefügt werden kann, stellt sich die Frage, in wie fern Extreme Programming diesen Aspekt berücksichtigt.
-Die folgenden Betrachtungen stützen sich auf \parencite[][S. 8 ff.]{Wayrynen:2004aa}.
-
-Bei Betrachtung des Vorgehensmodells wird klar, dass XP standardmäßig keine Unterstützung für nicht-funktionale Anforderungen bietet.
-Da Benutzer meist auf funktionale Anforderungen fixiert sind, muss XP um eine Möglichkeit erweitert werden, diesen Benutzern bezüglich der Spezifikation von sicherheitsrelevanten nicht-funktionalen Anforderungen zu helfen.
-Durch Bildung eines Kundenteams mit einem Sicherheitsexperten, anstatt nur einem einzigen Kunden, der beim Entwicklerteam vor Ort ist, könnte dieses Wissen in die Spezifikation miteinfließen.
-Dadurch könnte eine Sicherheitsanalyse und Risikobewertung fachgerecht erfolgen.
-
-Des Weiteren erfordern sicherheitskritische Bereiche ein gewisses Zusicherungsniveau bezüglich der Vermeidung von Risiken.
-Mit umfangreicher Dokumentation wird dies glaubhaft nachgewiesen.
-Dem gegenüber steht jedoch der Anspruch wenig Dokumentation bei XP zu erzeugen.
-Hier müsste also die Methodik angepasst werden, so dass aus Sicht des Entwicklers unnötige Dokumentation trotzdem generiert wird.
-Andererseits kann das Pair-Programming und automatisierte Tests als eine Art von Zusicherung angesehen werden.
-Jedoch ist es fraglich, ob dies unabhängigen Audits standhält.
-
-Zusammenfassend muss festgestellt werden, dass XP noch stark angepasst werden muss.
-Insbesondere die Spezifikation von Sicherheitsanforderungen, der Aufbau von eines Zusicherungsniveaus und das Etablieren von Tests als eine Form der Verifikation müssen durch Prozesse besser abgedeckt werden.
-
-\subsection{Scrum} 
-
-Insbesondere in der Raumfahrtindustrie ergeben sich in letzter Zeit einige Änderungen bezüglich der Marktsituation.
-Durch Eintritt von privaten Unternehmen, in den zuvor von staatlichen Einrichtungen kontrollierten Markt der Raumfahrt, ergeben sich neue Anforderungen an die Vorgehensmodelle.
-Die bisher klassischen Vorgehensmodelle müssen angepasst werden, um gegen die stetig größer werdende Anzahl an Mittbewerbern bestehen zu können.
-
-Raumfahrtsysteme haben meist sowohl plangetrieben als auch agile Komponenten.
-Deshalb bieten sich hybride Vorgehensmodelle dafür an.
-Boeing, Nokia und Daimer-Chrysler setzen beispielsweise auf solche Vorgehensmodelle.
-Dabei sollten agile Methoden insbesondere bei Prozessen zum Einsatz kommen, bei denen es darum geht, \emph{was} und nicht \emph{wie} etwas getan wird.
-So bieten sich die agilen Methoden an, wenn neues Wissen generiert werden muss. 
-Dahingegen können bei routinemäßigen Aufgaben die etablierten formalen Vorgehensmethoden verwendet werden.
-
-Einige Scrum-Komponenten müssen jedoch verworfen werden.
-Sich ändernde Requirements, minimale Dokumentaion und Refactoring sind für die Raumfahrtindustrie nicht geeignet.
-Dem gegenüber passt die testgetriebene Entwicklung und Scrum als Gesamtes sehr gut in dieses Umfeld.
-Durch die strikten Sicherheitsanforderungen ist die testgetriebene Entwicklung ein sich anbietendens Konzept.
-Genauso bietet sich aufgrund der Komplexität der Software Pair-Programming an.
-
-Den sozialen Faktor betreffend sind die täglichen Meetings eine gut passende Methode von Scrum, um die Kommunikation im Team zu verbessern.
-Insbesondere bei sehr technischen und komplexen Aufgaben stellt diese Methode sicher, dass alle Beteiligten ein gemeinsames Verständnis entwickeln.
-Die Sprint-Dauer könnte an das Projekt angepasst und eventuell etwas länger als gewöhnlich gewählt werden.
-Aufträge an Sub-Lieferanten könnten mit Scrum sehr gut als übergeordente Managementmethode verwaltet werden.
-
-Teams die sich häufig neu zusammensetzen oder geographisch verteilt sind, könnten sich als problematisch erweisen, da unter Umständen eine Kultur gefördert wird, die Risiken und Probleme nicht ausreichend kommuniziert.
-Auch muss Scrum dahingegen angepasst werden, dass Leistungsanforderungen explizit und möglichst früh spezifiziert werden.
-Durch Scrum kann auf kritische Probleme sehr gut reagiert werden, da durch den Kunde stetig Rückmeldung und eine Priorisierung erfolgt.
-\parencite[Vgl.][]{Carpenter:2014aa}
 
 \subsection{Kompatibilität mit Normen} % 1 Seite
 
