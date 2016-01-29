@@ -1,7 +1,7 @@
 \chapter{Grundlagen} % 15 Seiten
 
 Die Vermittlung der Grundlagen dient als Basis für die weitere Arbeit und beginnt mit  einer Erläuterung der verschiedenen Vorgehensmodelle.
-Darauf folgt eine Einführung in DevOps bevor das Kapitel mit einem Vergleich der Branchen und einer kurzen Darstellung von wichtigen Leistungskennzahlen abschließt.
+Darauf folgt eine Einführung in DevOps bevor das Kapitel mit einem Vergleich der Bereiche und einer kurzen Darstellung von wichtigen Leistungskennzahlen abschließt.
 
 \section{Vorgehensmodelle} % 6 Seiten
 
@@ -274,21 +274,21 @@ Woher stammt der Begriff DevOps und wie hat sich DevOps über die Zeit entwickel
 \subsection{Ziele}
 Was sind die Ziele von DevOps? Was ist daran so besonders/gut/neu?
 
-\section{Klassische und sicherheitskritische Branchen im Vergleich} % 4 Seiten
+\section{Klassische und sicherheitskritische Bereiche im Vergleich} % 4 Seiten
 
-In diesem Abschnitt sollen klassische und sicherheitskritische Branchen bezüglich für die Softwareentwicklung relevanter Faktoren verglichen werden.
-Dabei wird eine Branche als \emph{sicherheitskritisch} eingestuft, wenn die verwendete Software gesteigerten Sicherheitsansprüchen genügen muss oder als \emph{missionskritisch} eingestuft wird.
+In diesem Abschnitt sollen klassische und sicherheitskritische Bereiche bezüglich für die Softwareentwicklung relevanter Faktoren verglichen werden.
+Dabei wird ein Bereich als \emph{sicherheitskritisch} eingestuft, wenn die verwendete Software gesteigerten Sicherheitsansprüchen genügen muss oder als \emph{missionskritisch} eingestuft wird.
 Die Verletzung dieser Ansprüche kann Verlust streng vertraulicher Daten, Gefahr für Leib und Leben oder negative Auswirkungen für die Umwelt zur Folge haben.
-Alle Branchen die hauptsächlich Software verwenden, die diesen Ansprüchen nicht genügen muss, werden unter dem Begriff \emph{klassische Branchen} zusammengefasst.
+Alle Bereiche die hauptsächlich Software verwenden, die diesen Ansprüchen nicht genügen muss, werden unter dem Begriff \emph{klassische Bereiche} zusammengefasst.
 
 \subsection{Sicherheitsanspruch} % 1 Seite
 
-Die Bewertung von Bugs in Software hängt von der betrachteten Branche ab.
-Fehler in Software für klassische Branchen haben meist nur hohe monetäre Kosten.
+Die Bewertung von Bugs in Software hängt von dem betrachteten Bereich ab.
+Fehler in Software für klassische Bereiche haben meist nur hohe monetäre Kosten.
 So haben beispielsweise die Viren MyDoom, SoBig.F, Slammer, etc., die Software Bugs ausgenutzt haben, weltweit einen finanziellen Schaden von mehreren Milliarden Euro verursacht. \parencite[Vgl.][]{ComputerEconomics2004aa}
 
-Dahingegen sind die Folgen von Fehlern in sicherheitskritischen Branchen weitaus schwerwiegender, denn beispielsweise Fehler in Satelliten können nicht einfach ausgebessert werden, diese müssen sofort fehlerfrei arbeiten.
-\parencite[][]{Zhivich:2009aa} nennt mehrere große Ereignisse in sicherheitskritischen Branchen mit teilweise fatalen Folgen:
+Dahingegen sind die Folgen von Fehlern in sicherheitskritischen Bereichen weitaus schwerwiegender, denn beispielsweise Fehler in Satelliten können nicht einfach ausgebessert werden, diese müssen sofort fehlerfrei arbeiten.
+\parencite[][]{Zhivich:2009aa} nennt mehrere große Ereignisse in sicherheitskritischen Bereichen mit teilweise fatalen Folgen:
 
 Ein Berechnungsfehler durch Missachtung der beschränkten Präzision von Gleitkommaoperationen führte bei einem Patriot-Raketen-Abwehrsystem der US-Armee in Saudi-Arabien zum Tod von 28 Soldaten.
 Eine Scud-Rakete konnte aufgrund des Fehlers nicht abgefangen werden, da die Flugbahn der Rakete falsch bestimmt wurde.
@@ -305,11 +305,11 @@ Zwar war der Hauptgrund ein physischer Defekt, jedoch hätte das Kontrollsystem 
 Aufgrund eines nicht näher genannten Fehlers war dies nicht der Fall und das Personal konnte den Fehler nicht rechtzeitig entdecken.
 Andernfalls hätte die Pipeline vorher abgeschaltet und der Tod von drei Menschen verhindert werden können.
 
-Diese Vorfälle zeigen deutlich, wie unterschiedlich die Anforderungen an die Sicherheit von Software in klassischen bzw. sicherheitskritischen Branchen sind.
+Diese Vorfälle zeigen deutlich, wie unterschiedlich die Anforderungen an die Sicherheit von Software in klassischen bzw. sicherheitskritischen Bereichen sind.
 
 \subsection{Normen} % 2 Seiten
 
-In den klassischen Branchen existiert meist keine bindende Norm für die Unternehmen.
+In den klassischen Bereichen existiert meist keine bindende Norm für die Unternehmen.
 Jedoch bietet die Norm DIN ISO/IEC 12119 einen Katalog an Anforderungen, der eine gewisse Qualität der Software garantiert.
 So wird z. B. auf Endlosschleifen, Abstürze, Bedienbarkeit, Benutzerdokumentation und korrekte Versionierung geprüft. 
 Eine weitere Norm die allgemeine Qualitätsanforderungen stellt ist die ISO 9001.
@@ -317,7 +317,7 @@ Diese ist jedoch weniger auf das Endprodukt als auf die Entwicklung und Organisa
 \parencite[Vgl.][S. 66 - 67]{Hohler:1998aa}
 
 
-Für sicherheitskritische Branchen existieren einige spezielle Normen wie beispielsweise die ECSS-E-40 Norm der European Corporation on Space Standardization (ECSS).
+Für sicherheitskritische Bereiche existieren einige spezielle Normen wie beispielsweise die ECSS-E-40 Norm der European Corporation on Space Standardization (ECSS).
 Vorläufer bzw. Basis der Norm ist ISO 12207.
 Hauptfokus der Norm ist die Definition von Prozessen und deren Beschreibung. 
 Die Norm beschreibt die Anforderungen und die erwarteten Eingabe und Ergebnisse der Prozesse.
@@ -366,7 +366,7 @@ Ziel der Norm ist es, die Risiken während des Betriebs der Software zu minimier
 
 \subsection{Entwicklung} % 1-2 Seiten
 
-Sicherheitskritische Branchen setzen bei der Entwicklung üblicherweise auf ein sehr formales, geplantes Vorgehen.
+Sicherheitskritische Bereiche setzen bei der Entwicklung üblicherweise auf ein sehr formales, geplantes Vorgehen.
 Frameworks helfen alle erforderlichen Prozesse und Zwischenprodukte zu durchlaufen bzw. zu generieren und verhindern.
 Ein weitere Vorteil von Frameworks, die dies unterstützen, ist, dass komplexe Software von mehreren Lieferanten in den Entwicklungsprozess eingebunden werden kann.
 Meist nutzen diese eigene Entwicklungsprozesse und Vorgehensmodelle.
@@ -375,24 +375,24 @@ Dies umfasst eine umfangreiche und exakte Dokumentation aller Softwareprodukte.
 
 Zusätzlich wird durch Redundanz versucht die Auswirkungen von Fehlern zu minimieren.
 So könnte ein zweites Steuerungssystem in einem Flugzeug Leben retten, wenn das erste aufgrund eines Hardware- oder seltenen Softwaredefekts ausfällt.
-Auch die Wiederverwendung von Komponenten spielt in diesen hochspezialisierten Bereichen eine geringere Bedeutung, während in klassischen Branchen oft Wert auf Wiederverwendung gelegt wird, um neue Produkte schneller und günstiger herstellen zu können.
+Auch die Wiederverwendung von Komponenten spielt in diesen hochspezialisierten Bereichen eine geringere Bedeutung, während in klassischen Bereichen oft Wert auf Wiederverwendung gelegt wird, um neue Produkte schneller und günstiger herstellen zu können.
 \parencite[Vgl.][S. 39]{Carpenter:2014aa}
 
-Auch bezüglich der Vorgehensmodelle sind sicherheitskritische Branchen wesentlich konservativer eingestellt.
+Auch bezüglich der Vorgehensmodelle sind sicherheitskritische Bereiche wesentlich konservativer eingestellt.
 Um den Anspruch einer umfangreichen Dokumentation zu erfüllen wird meist auf klassische Vorgehensmodelle gesetzt.
 \parencite[Vgl.][S. 39]{Carpenter:2014aa}
 
 Die Best Practices für Raumfahrtentwicklung \parencite[vgl.][]{Hersman:2010aa} zeigen den starken Formalismus in der Entwicklung auf.
-Geprägt durch eine Vielzahl an Normen, Zertifizierungen und Prozessen wird auf die besonderen Anforderungen dieser Branche Rücksicht genommen.
+Geprägt durch eine Vielzahl an Normen, Zertifizierungen und Prozessen wird auf die besonderen Anforderungen dieses Bereichs Rücksicht genommen.
 
-Dem gegenüber steht ein weniger formales, flexibleres Vorgehen in den klassischen Branchen. 
+Dem gegenüber steht ein weniger formales, flexibleres Vorgehen in den klassischen Bereichen. 
 Als Grund lassen sich kürzere Entwicklungszeiten, hoher Wettbewerbsdruck und niedrigere Risiken identifizieren.
 
 
 \subsection{Time to Market} % 1/2 Seite
 
-In der Raumfahrtindustrie sind die Entwicklungszeiten wesentlich länger im Vergleich zu klassischen Branchen.
-Die Projektplanung bzw. die Einhaltung des Plans habe in diesen Branchen das größte Gewicht. 
+In der Raumfahrtindustrie sind die Entwicklungszeiten wesentlich länger im Vergleich zu klassischen Bereichen.
+Die Projektplanung bzw. die Einhaltung des Plans habe in diesen Bereichen das größte Gewicht. 
 Hier gilt es, möglichst schnell unter Zeitdruck vor den Mitbewerbern ein lauffähiges Produkt auszuliefern.
 Dabei belaufen sich die Entwicklungszeiten meist auf wenige Monate bis Jahre (selten).
 Dahingegen sind in der Raumfahrtindustrie lange Laufzeiten von mehreren Jahren der Regelfall.
