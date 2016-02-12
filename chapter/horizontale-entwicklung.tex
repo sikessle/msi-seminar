@@ -210,8 +210,16 @@ So werden die User Stories um sogenannte \emph{Abuser Stories} ergänzt.
 Eine Abuser Story ähnelt formal einer User Story, beschreibt jedoch wie ein Angreifer das System missbrauchen kann, um an Daten o.ä. zu kommen.
 Gegenüber einer User Story wird eine Abuser Story nicht über den Wertbeitrag priorisiert, sondern über das potentielle Risiko und dem Schaden durch den Angriff.
 Dabei wird einerseits der potentielle Schaden, andererseits die Eintrittswahrscheinlichkeit zur Berechnung herangezogen.
-Eine Abuser Story sollte, bei Bezug zu einer User Story, Kosten in gleicher Höhe wie der Wertbeitrag der User Story besitzen.
-Dadurch kann die Abuser Story als Umkehrfunktion betrachtet werden, die den Wertbeitrag der User Story wieder vernichtet, wenn das Szenario eintritt.
+Eine Abuser Story sollte, bei Bezug zu einer User Story, Kosten in gleicher Höhe wie der Wertbeitrag der User Story besitzen:
+$$Wertbeitrag(UserStory) - Schaden(AbuserStory) = 0$$
+Dadurch kann die Abuser Story als Umkehrfunktion betrachtet werden, die den Wertbeitrag der User Story wieder vernichtet, wenn das Szenario eintritt (vgl. \autoref{fig:abuser-story}).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6 \textwidth]{img/abuser-story.png}
+  \caption{Verhältnis zwischen User und Abuser Story}
+  \label{fig:abuser-story}
+\end{figure}
 
 Die Aufwandsschätzung einer Abuser Story bezieht sich dabei auf den Aufwand, der nötig ist, um das System gegen den Angriff zu schützen.
 Eine \emph{Widerlegung} ist das Gegenstück zu einem Test. 
