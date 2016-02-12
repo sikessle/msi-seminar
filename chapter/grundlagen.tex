@@ -6,7 +6,7 @@ Darauf folgt eine Einführung in DevOps bevor das Kapitel mit einem Vergleich de
 \section{Vorgehensmodelle} % 6 Seiten
 
 Diese Arbeit kategorisiert die Vorgehensmodelle zur Entwicklung von Software in zwei Kategorien: \emph{klassische} und \emph{agile} Vorgehensmodelle.
-Unter \emph{klassisch} werden alle Vorgehensmodelle, die nicht agil und somit plangetrieben sind, zusammengefasst.
+Unter \emph{klassisch} werden alle Vorgehensmodelle, die nicht agil und somit (vornehmlich) plangetrieben sind, zusammengefasst.
 Im Fokus dieses Abschnitts steht die Erläuterung relevanter Vertreter dieser Kategorien.
 
 \subsection{Klassisch} % 3 Seiten
@@ -27,13 +27,12 @@ Dabei fließt der Output einer vorgelagerten Stufe stets als Input in die nachge
 \end{figure}
 
 Dieses Modell weist eine sehr gute Planbarkeit auf, da es streng abgegrenzte Phasen gibt. 
-Bezeichnend ist, dass die jeweiligen Phasen stets vollständig abgeschlossen sein müssen, bevor zu der nächsten Phase übergegangen wird \parencite[Vgl.][S. 48]{Schatten:2010aa}.
+Bezeichnend ist, dass die jeweiligen Phasen stets vollständig abgeschlossen sein müssen, bevor zu der nächsten Phase übergegangen wird \parencite[vgl.][S. 48]{Schatten:2010aa}.
 Erweiterungen des Modells bestehen in der Einführung einer Rücksprungmöglichkeit, wenn in einer Phase Fehler erkannt oder sonstige Richtlinien verletzt werden.
-Dieses sequentielle Vorgehen hat den Nachteil, dass der Kunde lediglich am Anfang und am Ende in den Entwicklungsprozess miteinbezogen wird.
-Änderungswünsche während der Entwicklung werden nicht berücksichtigt.
+Dieses sequentielle Vorgehen hat den Nachteil, dass der Kunde lediglich am Anfang und am Ende in den Entwicklungsprozess miteinbezogen wird, sowie Änderungswünsche während der Entwicklung nicht berücksichtigt werden können.
 Auch das Auftreten von Risiken verzögert den Projektverlauf, da alle nachgelagerten Phasen betroffen sind.
 
-Dass dieses Modell für große Softwareprojekte meist wenig geeignet ist, wurde bereits 1970 erkannt: \enquote{In my experience, however, the simpler method has never worked on large software development efforts [...]} \parencite[][]{Royce:1970aa}.
+Dass dieses Modell für große Softwareprojekte meist wenig geeignet ist, wurde bereits 1970 erkannt: \enquote{In my experience, however, the simpler method has never worked on large software development efforts [...]} \parencite[][S. 335]{Royce:1970aa}.
 
 Mittlerweile wird dieses Vorgehen für moderne Softwareprojekte kaum noch verwendet und aktuelle Literatur rät auch meist von der Verwendung des Modells ab.
 \parencite[Vgl.][S. 49]{Schatten:2010aa}
@@ -42,8 +41,8 @@ Mittlerweile wird dieses Vorgehen für moderne Softwareprojekte kaum noch verwen
 
 Das Spiralmodell ist ein iterative-inkrementelles, risikogetriebenes Vorgehensmodell.
 Dabei werden die Entwicklungsschritte zyklisch durchlaufen (vgl. \autoref{fig:spiralmodell}), bis das Endprodukt fertiggestellt ist.
-Entstanden ist das Modell aus dem Wasserfallmodell, welches angepasst für umfangreiche Regierungsprojekte verwendet wurde \parencite[][]{Boehm:1988aa}.
-\parencite[][S. 57]{Schatten:2010aa} identifiziert dabei die folgenden vier Schritte:
+Entstanden ist das Modell aus dem Wasserfallmodell, welches angepasst für umfangreiche Regierungsprojekte verwendet wurde \parencite[vgl.][S. 64]{Boehm:1988aa}.
+\parencite[][S. 57]{Schatten:2010aa} identifiziert dabei die folgenden vier Schritte als Hauptbestandteile des Spiralmodells:
 
 \begin{itemize}
 \item Zieldefinition
@@ -55,16 +54,16 @@ Entstanden ist das Modell aus dem Wasserfallmodell, welches angepasst für umfan
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{img/spiralmodell.png}
-  \caption{Spiralmodell \parencite[][]{Boehm:1988aa}}
+  \caption{Spiralmodell \parencite[][S. 64]{Boehm:1988aa}}
   \label{fig:spiralmodell}
 \end{figure}
 
 Bei Betrachtung der Spirale (vgl. \autoref{fig:spiralmodell}) können zwei Dimensionen für den Projektfortschritt ausgemacht werden.
 Die Winkeldimension zeigt den Fortschritt einer einzelnen Iteration an, während die radiale Dimension die kumulierten Kosten bisher angibt.
-\parencite[][S. 65]{Boehm:1988aa}
+\parencite[Vgl. ][S. 65]{Boehm:1988aa}
 
 Geeignet ist das Spiralmodell für komplexe und langlaufende Projekte, bei denen sich die Anforderungen erst im Laufe der Entwicklung ergeben. 
-Dabei muss jedoch beachtet werden, dass eine Gesamtplanung über die Dauer des Projekts mit steigender Anzahl an Iterationen schwieriger wird. \parencite[][S. 58]{Schatten:2010aa}
+Dabei muss jedoch beachtet werden, dass eine Gesamtplanung über die Dauer des Projekts mit steigender Anzahl an Iterationen schwieriger wird. \parencite[Vgl.][S. 58]{Schatten:2010aa}
 
 \subsubsection{Rational Unified Process (RUP)}
 
@@ -82,34 +81,34 @@ Das Modell setzt stark auf die Verwendung von UML und eine Toolchain zur Unterst
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{img/rupmodell.png}
-  \caption{Rational Unified Process \parencite[][]{Kleuker:2011aa}}
+  \caption{Rational Unified Process \parencite[][S. 40]{Kleuker:2011aa}}
   \label{fig:rupmodell}
 \end{figure}
 
 Jede Phase kann nochmals in mehrere Iterationen aufgeteilt werden. 
 Diese werden solange wiederholt, bis ein zufriedenstellendes Ergebnis in dieser Phase erreicht wurde.
 In \autoref{fig:rupmodell} können die Aufwände in der jeweiligen Phase abgelesen werden. 
-Dabei ist ersichtlich, dass in jeder Phase die einzelnen Disziplinen unterschiedlich stark involviert sind.
+Dabei ist ersichtlich, dass in jeder Phase die einzelnen Tätigkeiten unterschiedlich stark involviert sind.
 Dies kann als Vorteil gegenüber dem Wasserfallmodell gesehen werden, da so z. B. Anforderungsanalyse und Test das Projekt ständig begleiten, was die Änderungsfähigkeit des Projekts begünstigt.
 \parencite[][S. 60]{Schatten:2010aa} führt auf, dass insbesondere durch die Erzeugung einer Vielzahl von Dokumentation (UML etc.) die Flexibilität eingeschränkt ist.
 Hierbei sollte auch bedacht werden, dass insbesondere UML als komplex und schwergewichtig bezeichnet werden kann, was dem Modell nicht zuträglich ist.
 
-\subsubsection{V-Modell}
+\subsubsection{V-Modell} \label{sec:vmodell}
 
 Das V-Modell entstand durch das Bundesamt für Wehrtechnik aufgrund schlechter Erfahrungen mit anderen Vorgehensmodellen \parencite[vgl.][S. 1]{droschel2000v}.
-Das V illustriert dabei die beiden Phasen \emph{Konzeption} und \emph{Konstruktion}.
-In der Konzeptionsphase wird schrittweise das System spezifiziert und weiter verfeinert. 
+Das V illustriert dabei die beiden Phasen \emph{Konstruktion} und \emph{Integration}.
+In der Konstruktionsphase wird schrittweise das System spezifiziert und weiter verfeinert. 
 Dabei liefert jede Stufe gleichzeitig die Tests für die gegenüberliegende Konstruktionsstufe.
-Nach der Implementierung werden die Komponenten in der Konstruktionsphase stückweise integriert und getestet.
+Nach der Implementierung werden die Komponenten in der Integrationsphase stückweise integriert und gegen die zuvor spezifizierten Tests verifiziert.
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{img/vmodell.png}
-  \caption{V-Modell \parencite[][]{Kleuker:2011aa}}
+  \caption{V-Modell \parencite[][S. 31]{Kleuker:2011aa}}
   \label{fig:vmodell}
 \end{figure}
 
-Es lassen sich aus den einzelnen Stufen verschiedene Systemsichten ableiten \parencite[vgl.][S. 50]{Schatten:2010aa}: 
+Es lassen sich aus den einzelnen Stufen verschiedene \emph{Systemsichten} ableiten \parencite[vgl.][S. 50]{Schatten:2010aa}: 
 
 \begin{itemize}
 \item Anwendersicht (oberste Stufe)
@@ -127,16 +126,16 @@ Dies liegt in der meist recht stabilen Anforderungsspezifikation dieser Projekte
 
 Durch Erweiterung des V-Modells entstand das V-Modell XT.
 Das Kürzel XT steht für \emph{Extreme Tailoring} und stellt den Fokus der Erweiterung klar: Modularität, Erweiterbarkeit und Anpassungsfähigkeit des Modells.
-Ziel ist es auch, die Kommunikation zwischen Auftraggeber und Auftragnehmer zu verbessern.
+Ziel ist es auch, die Kommunikation zwischen Auftraggeber und Auftragsnehmer zu verbessern.
 Hierfür werden Vorgehensbausteine definiert, welche flexibel kombiniert werden können \parencite[vgl.][S. 222]{Broy:2005aa}.
 
-Das Modell ist ein Metamodell, welches den Auftragnehmer nicht zwangsläufig dazu zwingt, das Modell genau wie angegeben durchzuführen.
+Das Modell ist ein Metamodell, welches den Auftragsnehmer nicht zwangsläufig dazu zwingt, das Modell genau wie angegeben durchzuführen.
 Lediglich die zu liefernden Produkte in den einzelnen Phasen müssen entsprechend vorliegen.
 Somit kann das Modell als eine Art Schnittstelle zwischen Auftraggeber und -nehmer angesehen werden. \parencite[Vgl.][S. 126]{Kuhrmann:2008aa}
 
 Da, ähnlich wie beim V-Modell, sehr viel Dokumentation erzeugt wird, ist es von besonderer Wichtigkeit das Modell sehr gut anzupassen, um nicht unnötige Dokumente zu erzeugen. \parencite[Vgl.][S. 39]{Kleuker:2011aa}
 
-Seit 2005 ist dieses Vorgehensmodell verpflichtend für alle IT-Projekte der deutschen Bundesbehörden. \parencite[Vgl.][]{Hohn:2008aa}
+Seit 2005 ist dieses Vorgehensmodell verpflichtend für alle IT-Projekte der deutschen Bundesbehörden \parencite[vgl.][]{Hohn:2008aa}.
 
 \subsection{Agil} % 3 Seiten
 
@@ -149,10 +148,10 @@ Wir erschließen bessere Wege, Software zu entwickeln,
 indem wir es selbst tun und anderen dabei helfen.
 Durch diese Tätigkeit haben wir diese Werte zu schätzen gelernt:
 
-Individuen und Interaktionen mehr als Prozesse und Werkzeuge
-Funktionierende Software mehr als umfassende Dokumentation
-Zusammenarbeit mit dem Kunden mehr als Vertragsverhandlung
-Reagieren auf Veränderung mehr als das Befolgen eines Plans
+\emph{Individuen und Interaktionen} mehr als Prozesse und Werkzeuge
+\emph{Funktionierende Software} mehr als umfassende Dokumentation
+\emph{Zusammenarbeit mit dem Kunden} mehr als Vertragsverhandlung
+\emph{Reagieren auf Veränderung} mehr als das Befolgen eines Plans
 
 Das heißt, obwohl wir die Werte auf der rechten Seite wichtig finden,
 schätzen wir die Werte auf der linken Seite höher ein.
@@ -162,42 +161,42 @@ schätzen wir die Werte auf der linken Seite höher ein.
 Ziel der agilen Vorgehensmodelle ist es, möglichst früh ein lauffähiges Inkrement zu erhalten, welches dem Kunden präsentiert werden kann. 
 Dadurch soll eine enge Kollaboration mit dem Kunden erzeugt werden, so dass Änderungen möglichst schnell umgesetzt werden können. \parencite[Vgl.][S. 62]{Schatten:2010aa}
 
-Erreicht werden sollen diese Verbesserungen durch die Reduzierung von unnötiger Dokumentation, enge Zusammenarbeit mit dem Kunden und einer Fokussierung auf der Generierung von Wert für den Kunden (in Form von Software).
+Erreicht werden sollen diese Verbesserungen offensichtlich durch die Reduzierung von unnötiger Dokumentation, enge Zusammenarbeit mit dem Kunden und einer Fokussierung auf der Generierung von Wert für den Kunden (in Form von Software).
 
 \subsubsection{Scrum}
 
-Scrum ist definiert als:
-\enquote{A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.}
-\parencite[][S. 3]{schwaber2011scrum}
+\emph{Scrum} ist definiert als:
+\enquote{A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value}
+\parencite[][S. 3]{schwaber2011scrum}.
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{img/scrummodell.png}
-  \caption{Scrum \parencite[][]{Schatten:2010aa}}
+  \caption{Scrum \parencite[][S. 63]{Schatten:2010aa}}
   \label{fig:scrummodell}
 \end{figure}
 
 \autoref{fig:scrummodell} visualisiert das Prinzip und den Ablauf von Scrum.
-Anforderungen werden in Form von User Stories im Product Backlog hinterlegt.
+Anforderungen werden in Form von \emph{User Storys} im \emph{Product Backlog} hinterlegt.
 Eine User Story beschreibt dabei ein kleines, vertikales Inkrement der Software, die dem Kunden einen Nutzen bringt.
-Die selbst organisierenden Teams wählen zu Beginn eines Sprints eine Anzahl von User Stories, die sie während der Dauer des Sprints (typischerweise 2-4 Wochen) implementieren.
+Die selbst organisierenden Teams wählen zu Beginn eines Sprints eine Anzahl von User Storys, die sie während der Dauer des Sprints (typischerweise 2-4 Wochen) implementieren.
 Am Ende eines Sprints werden die entwickelten Funktionen ausgeliefert und dem Kunden präsentiert.
 
-Durch die kleinen Teams und kurzen Sprints wird eine hohe Flexibilität bezüglich Änderungen und Reaktion auf Risiken erreicht.
+Durch die kleinen Teams und kurzen Sprints wird eine hohe Flexibilität bezüglich Änderungen und der Reaktion auf Risiken erreicht.
 Außerdem wird der Managementaufwand reduziert, da sich die Teams selbst organisieren.
-Begleitet wird der Prozess durch einen Scrum Master, welcher hauptsächlich organisatorische Tätigkeiten ausführt und zwischen dem Kunden und dem Team vermittelt.
+Begleitet wird der Prozess durch einen \emph{Scrum Master}, welcher hauptsächlich organisatorische Tätigkeiten ausführt und zwischen dem Kunden und dem Team vermittelt.
 
 So einfach das Prinzip von Scrum sein mag, so schwierig kann die Einführung in Unternehmen sein.
 Es muss unterschieden werden, welche konkrete Ausprägung von Scrum bereits im Unternehmen vorherrscht und welche Ausprägung erreicht werden soll.
-\parencite[][S. 3ff]{maximini2012scrum} beschreibt sechs Ausprägungen, die sich in der Tiefe und Nachhaltigkeit der Implementierung unterscheiden.
+\parencite[][S. 8]{maximini2012scrum} beschreibt sechs Ausprägungen, die sich in der Tiefe und Nachhaltigkeit der Implementierung unterscheiden.
 Das untere Spektrum wird durch \emph{Scrum PRN} (Scrum nach Bedarf) abgedeckt, welches sich durch eine spontane, lokale Umsetzung von Scrum auszeichnet.
-Am anderen Ende des Sprektrums steht \emph{Nachhaltiges Tiefen-Scrum}.
-Hier tragen alle Mitarbeiter, die hoch motiviert sind, den Gedanken von Scrum in sich und treiben Veränderungen voran.
+Am anderen Ende des Spektrums steht \emph{Nachhaltiges Tiefen-Scrum}.
+Hier tragen alle Mitarbeiter, die hoch motiviert sind, den Gedanken von Scrum tief in sich und treiben Veränderungen voran.
 
 \subsubsection{Kanban}
 
-Kanban stammt aus dem japanischen und bedeutet \emph{Signalkarte}.
-Diese Technik stammt aus dem erfolgreichen Toyota-Produktionsprozess und stellt sicher, dass Ressourcen limitiert sind (z. B. kann ein Entwickler-Team nicht beliebig viele Features gleichzeitig umsetzen).
+\emph{Kanban} stammt aus dem japanischen und bedeutet sinngemäß \emph{Signalkarte} \parencite[vgl.][S. 23f.]{Epping:2011aa}.
+Diese Technik stammt aus dem erfolgreichen Toyota-Produktionsprozess und stellt sicher, dass Ressourcen limitiert sind (z. B. kann ein Entwickler-Team nicht beliebig viele Features gleichzeitig umsetzen) \parencite[vgl.][S. 33f.]{Epping:2011aa}.
 Meist wird ein Kanban-Board eingesetzt, welches die verschiedenen Phasen der Entwicklung visualisiert.
 Dabei fließen Karten, ähnlich einer User Story, durch die Phasen des Boards.
 Ziel ist es, die Durchlaufrate dieser Karten zu maximieren.
@@ -219,21 +218,21 @@ Ein wichtiger Unterschied ist jedoch, dass bei Kanban stets kleine Inkremente du
 \subsubsection{Extreme Programming (XP)}
 
 XP vereint einige der zuvor genannten agile Methoden und stellt eine Zusammenfassung bekannter Best Practices dar.
-Beschrieben wurde es von Kent Beck \parencite[][]{Beck:1999aa}, der explizit dazu rät, das Vorgehensmodell teilweise in einzelnen Aspekten eines Projekts einzuführen.
-Dies zeigt auch, dass XP kein formales Vorgehensmodell ist (vgl. V-Modell), sondern eine lose Sammlung von Methoden.
+Beschrieben wurde es von Kent Beck, der explizit dazu rät, das Vorgehensmodell zuerst teilweise in einzelnen Aspekten eines Projekts einzuführen \parencite[vgl.][S. 77]{Beck:1999aa}.
+Dies zeigt auch, dass XP kein formales Vorgehensmodell ist (vgl. V-Modell in \autoref{sec:vmodell}), sondern eine lose Sammlung von Methoden.
 Im Fokus von XP stehen dabei Projekte die sehr ungenaue Anforderungen haben und spät im Projektverlauf noch Änderungen erfahren.
 Eine grobe Beschreibung des Prozesses ist in \autoref{fig:xpmodell} ersichtlich. 
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{img/xpmodell.png}
-  \caption{XP Prozess \parencite[][]{Schatten:2010aa}}
+  \caption{XP Prozess \parencite[][S. 46]{Schatten:2010aa}}
   \label{fig:xpmodell}
 \end{figure}
 
 Eine bekannte Praxis aus XP ist das sogenannte \emph{Pair Programming}, bei dem stets zwei Personen zusammen entwickeln.
 Dies fördert die Qualität des Quellcodes und erleichtert die Erstellung von qualitativ hochwertigen Tests.
-Des Weiteren kann die Abhängigkeit von einzelnen Entwicklern und die Bildung von Wissenskonzentration verringert werden, da sich das Wissen auf mehrere Personen verteilt.
+Des Weiteren kann durch diese Methode die Abhängigkeit von einzelnen Entwicklern und die Bildung von Wissenskonzentration verringert werden, da sich das Wissen auf mehrere Personen verteilt.
 
 \section{DevOps} % 3 Seiten
 Was ist DevOps?
@@ -244,9 +243,9 @@ Woher stammt der Begriff DevOps und wie hat sich DevOps über die Zeit entwickel
 \subsection{Ziele}
 Was sind die Ziele von DevOps? Was ist daran so besonders/gut/neu?
 
-\section{Klassische und sicherheitskritische Bereiche im Vergleich} % 4 Seiten
+\section{Klassische und sicherheitskritische Bereiche im Vergleich} \label{sec:bereiche} % 4 Seiten
 
-In diesem Abschnitt sollen klassische und sicherheitskritische Bereiche bezüglich relevanter Faktoren verglichen werden.
+In diesem Abschnitt sollen klassische und sicherheitskritische Bereiche bezüglich relevanter Faktoren wie dem Sicherheitsanspruch an die Software, den bestehenden Normen, vorherrschenden Entwicklungspraktiken und der Time To Market verglichen werden.
 
 \subsection{Sicherheitsanspruch} % 1 Seite
 
@@ -255,17 +254,17 @@ Fehler in Software für klassische Bereiche haben meist nur hohe monetäre Koste
 So haben beispielsweise die Viren MyDoom, SoBig.F, Slammer, etc., die Software Bugs ausgenutzt haben, weltweit einen finanziellen Schaden von mehreren Milliarden Euro verursacht. \parencite[Vgl.][]{ComputerEconomics2004aa}
 
 Dahingegen sind die Folgen von Fehlern in sicherheitskritischen Bereichen weitaus schwerwiegender, denn beispielsweise Fehler in Satelliten können nicht einfach ausgebessert werden, diese müssen sofort fehlerfrei arbeiten.
-\parencite[][]{Zhivich:2009aa} nennt mehrere große Ereignisse in sicherheitskritischen Bereichen mit teilweise fatalen Folgen:
+\parencite[][S. 87 - 89]{Zhivich:2009aa} nennt mehrere große Ereignisse in sicherheitskritischen Bereichen mit teilweise fatalen Folgen:
 
 Ein Berechnungsfehler durch Missachtung der beschränkten Präzision von Gleitkommaoperationen führte bei einem Patriot-Raketen-Abwehrsystem der US-Armee in Saudi-Arabien zum Tod von 28 Soldaten.
-Eine Scud-Rakete konnte aufgrund des Fehlers nicht abgefangen werden, da die Flugbahn der Rakete falsch bestimmt wurde.
+Eine Scud-Rakete\footnote{Russische Boden-Boden-Kurzstreckenrakete} konnte aufgrund des Fehlers nicht abgefangen werden, da die Flugbahn der Rakete falsch bestimmt wurde.
 Ursache war einerseits der Berechnungsfehler, andererseits eine fehlerhafte Verwendung.
 Das System war für eine Betriebsdauer von 14 Stunden spezifiziert, wurde in Saudi-Arabien jedoch rund 100 Stunden ununterbrochen benutzt.
 Dadurch summierte sich der Berechnungsfehler auf und führte zu der fehlerhaften Flugbahnberechnung.
 
 Ein weiterer Vorfall ereignete sich im medizinischen Bereich.
-Durch eine Race-Condition in einem Bestrahlungsgerät wurden Krebspatienten mit der 100-fachen Dosis bestrahlt.
-Die Race-Condition konnte ausgelöst werden, wenn das Bedienpersonal am Gerät zu schnell verschiedene Tasten betätigte, was einen inkonsistenten Zustand zwischen Display und tatsächlichem Status zur Folge hatte.
+Durch eine Race-Condition\footnote{Ablauf von nebenläufigen Operationen, deren Ergebnis von der Reihenfolge abhängt.} in einem Bestrahlungsgerät wurden Krebspatienten mit der hundertfachen Dosis bestrahlt.
+Die Race-Condition konnte ausgelöst werden, wenn das Bedienpersonal am Gerät zu schnell verschiedene Tasten betätigte, was einen inkonsistenten Zustand zwischen Display und tatsächlichem Status des Geräts zur Folge hatte.
 
 Auch Bedrohungen für die Infrastruktur können auftreten, wie ein Bruch einer Gas-Pipeline in den USA beweist.
 Zwar war der Hauptgrund ein physischer Defekt, jedoch hätte das Kontrollsystem dies anzeigen müssen.
@@ -298,16 +297,17 @@ Wird durch den Kunden ausgeführt.
 \item[Software Requirements Engineering] Erstellung einer Softwareanforderungsanalyse und eines Architekturdesign durch den Lieferanten.
 \item[Software Design Engineering] Implementierung, Testen, Integrieren und Validieren der Softwarekomponenten durch den Lieferanten.
 \item[Software Validation and Acceptance] Validierung gegen die Anforderungen, Deployment und Akzeptanztest.
-\item[Software Operations Engineering] Vorbereiten des Betriebs der Software, operationellen Tests und Benutzersupport.
+\item[Software Operations Engineering] Vorbereiten des Betriebs der Software, der operationellen Tests und des Benutzersupport.
 \item[Software Maintenance] Problemanalyse, Bugfixing, Migration und Abschaltung von Software.
 \end{description}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{img/ecss-dokumentation.png}
-  \caption{Dokumentationskategorien von ECSS-E-40 \parencite[][]{jones2002introducing}}
+  \caption{Dokumentationskategorien von ECSS-E-40 \parencite[][S. 136]{jones2002introducing}}
   \label{fig:ecss-dok}
 \end{figure}
+
 Kennzeichnend ist die Maßgabe, dass sehr viel und ausführlich dokumentiert werden muss.
 Eine Vielzahl von Kategorien (vgl. \autoref{fig:ecss-dok}) zeigt die strengen Dokumentationsanforderungen.
 Der Standard legt Wert darauf, dass insbesondere die Anforderungen von Raumfahrtsoftware, wie begrenzte Ressourcen und gestiegene Komplexität möglichst gut abgedeckt werden.
@@ -316,32 +316,36 @@ Der Standard legt Wert darauf, dass insbesondere die Anforderungen von Raumfahrt
 Die Norm RTCA/DO-178B ist speziell für die Software in Flugzeugen definiert.
 Diese ebenfalls prozessorientierte Norm betrachtet auch externe Software (z. B. Entwicklungsumgebungen).
 Im Organisationsprozess wird die Anforderungsklasse der Software aus den Anforderungen an das Gesamtsystem abgeleitet, der Softwarelebenszyklus und die Dokumentation spezifiziert.
+\parencite[Vgl.][S. 71]{Hohler:1998aa}
 
 Im Softwarelebenszyklus werden dabei die einzelnen Phasen während der Entwicklung und des Betriebs der Software beschrieben.
 Der Softwareentwicklungsprozess umfasst die Anforderungsanalyse, Implementierung, Integration und Validierung, wobei die Validierung Reviews, Analysen und Tests beinhaltet.
 Während der Reviews und Analysen wird geprüft, ob alle organisatorischen (Dokumentation etc.) und fachlichen (Algorithmen etc.) Anforderungen eingehalten wurden.
+\parencite[Vgl.][S. 71]{Hohler:1998aa}
 
 Die Testphase erfordert das Durchführen von White-, Black-Box (mit Äquivalenzklassenbildung) und Integrationstests.
 Zusätzlich ist die Implementierung eines Konfigurationsmanagementprozesses erforderlich, um die Kombinationen von Software und Hardware zu verwalten.
-\parencite[Vgl.][S. 71ff]{Hohler:1998aa}
+\parencite[Vgl.][S. 71]{Hohler:1998aa}
 
 Häufig in der Raumfahrt verwendet wird der Standard IEC 61508 Teil 7.
 Dieser beschreibt welche Methoden für die Raumfahrt und andere sicherheitskritische Bereiche geeignet sind.
 Der Fokus liegt wie bei den meisten anderen Normen auf eingebetteten Systemen.
 Abgeleitet von diesem Standard wurde RTCA/DO-178B.
 Ziel der Norm ist es, die Risiken während des Betriebs der Software zu minimieren.
+\parencite[Vgl.][S. 40]{Carpenter:2014aa}
 
 \subsection{Entwicklungspraktiken} % 1-2 Seiten
 
 Sicherheitskritische Bereiche setzen bei der Entwicklung üblicherweise auf ein sehr formales, geplantes Vorgehen.
-Frameworks helfen alle erforderlichen Prozesse und Zwischenprodukte zu durchlaufen bzw. zu generieren und verhindern.
+Frameworks helfen alle erforderlichen Prozesse und Zwischenprodukte zu durchlaufen bzw. zu generieren.
 Ein weitere Vorteil von Frameworks, die dies unterstützen, ist, dass komplexe Software von mehreren Lieferanten in den Entwicklungsprozess eingebunden werden kann.
 Meist nutzen diese eigene Entwicklungsprozesse und Vorgehensmodelle.
 Durch ein Framework lassen sich diese über wohldefinierte Schnittstellen einbinden.
 Dies umfasst eine umfangreiche und exakte Dokumentation aller Softwareprodukte.
+\parencite[Vgl.][S. 39]{Carpenter:2014aa}
 
 Zusätzlich wird durch Redundanz versucht die Auswirkungen von Fehlern zu minimieren.
-So könnte ein zweites Steuerungssystem in einem Flugzeug Leben retten, wenn das erste aufgrund eines Hardware- oder seltenen Softwaredefekts ausfällt.
+So könnte ein zweites Steuerungssystem in einem Flugzeug Leben retten, wenn das erste aufgrund eines Hardware- oder Softwaredefekts ausfällt.
 Auch die Wiederverwendung von Komponenten spielt in diesen hochspezialisierten Bereichen eine geringere Bedeutung, während in klassischen Bereichen oft Wert auf Wiederverwendung gelegt wird, um neue Produkte schneller und günstiger herstellen zu können.
 \parencite[Vgl.][S. 39]{Carpenter:2014aa}
 
@@ -349,11 +353,11 @@ Auch bezüglich der Vorgehensmodelle sind sicherheitskritische Bereiche wesentli
 Um den Anspruch einer umfangreichen Dokumentation zu erfüllen wird meist auf klassische Vorgehensmodelle gesetzt.
 \parencite[Vgl.][S. 39]{Carpenter:2014aa}
 
-Die Best Practices für Raumfahrtentwicklung \parencite[vgl.][]{Hersman:2010aa} zeigen den starken Formalismus in der Entwicklung auf.
+Die Best Practices für Raumfahrtentwicklung zeigen den starken Formalismus in der Entwicklung auf \parencite[vgl.][S. 269ff]{Hersman:2010aa}.
 Geprägt durch eine Vielzahl an Normen, Zertifizierungen und Prozessen wird auf die besonderen Anforderungen dieses Bereichs Rücksicht genommen.
 
 Dem gegenüber steht ein weniger formales, flexibleres Vorgehen in den klassischen Bereichen. 
-Als Grund lassen sich kürzere Entwicklungszeiten, hoher Wettbewerbsdruck und niedrigere Risiken identifizieren.
+Als Grund lassen sich kürzere Entwicklungszeiten, hoher Wettbewerbsdruck und niedrigere Risiken identifizieren (vgl. \autoref{sec:bereiche}).
 
 
 \subsection{Time to Market} % 1/2 Seite
