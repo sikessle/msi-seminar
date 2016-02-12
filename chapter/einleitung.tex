@@ -5,27 +5,28 @@ Nachfolgend wird eine kurze Einführung in das Thema gegeben und die weitere Vor
 \section{Gegenstand der Arbeit}
 
 Diese Arbeit verwendet die Begriffe \emph{klassische} und \emph{sicherheitskritische} Bereiche zur Differenzierung zwischen Wirtschafts- und Unternehmensteilen die keinen erhöhten Sicherheitsbedarf haben und denen die explizit höhere Anforderungen bezüglich der Sicherheit haben (Kernkraftwerke, Luft- und Raumfahrtindustrie, etc.).
+Die Verletzung dieser Ansprüche kann den Verlust streng vertraulicher Daten, Gefahr für Leib und Leben oder negative Auswirkungen für die Umwelt zur Folge haben.
 
-Die agile Entwicklung ist nach diversen Studien und Umfragen \parencite[vgl.][]{VersionOne:2015aa, HP:2015aa} bei den meisten Unternehmen im Alltag angekommen.
-Damit hat sich der Trend fortgesetzt, von klassischen zu agilen Vorgehensmodellen über zu gehen. \parencite[Vgl.][]{Rodriguez:2012:SAL:2372251.2372275}
-In der gängigen Literatur wird meist nur auf die Anwendung von agilen Methoden in klassischen Bereichen eingegangen.
-Insbesondere die sicherheitskritischen Bereiche, wie die Luft- und Raumfahrtindustrie, nutzen jedoch noch klassische Vorgehensmodelle.
-Dies ist oft bedingt durch nationale Gesetze und Normen.
-Hier stellt sich die Frage, wie und ob diese Bereiche auch von den agilen Vorgehensmodellen profitieren könnten.
+Die agile Entwicklung ist nach diversen Studien und Umfragen bei den meisten Unternehmen im Alltag angekommen \parencite[vgl.][]{VersionOne:2015aa, HP:2015aa}. 
+Damit hat sich der Trend fortgesetzt, von klassischen zu agilen Vorgehensmodellen über zu gehen \parencite[vgl.][]{Rodriguez:2012:SAL:2372251.2372275}.
 
 Des Weiteren sind agile Vorgehensmodelle nicht nur auf die Entwicklung von Software beschränkt, sondern könnten auch auf den Betrieb von Software (DevOps) ausgeweitet werden.
-Auch hier kann unter Umständen in sicherheitskritischen Bereichen eine Verbesserung verschiedenster Faktoren durch die Einführung von DevOps erreicht werden.
-Jedoch müssen auch hier die besonderen Gegebenheiten dieser Bereiche beachtet werden.
+Eine Fragestellung ist hierbei, welche Verbesserungen unter welchen Voraussetzungen durch die Anwendung von DevOps erreicht werden können und ob diese auch in sicherheitskritsichen Bereichen möglich sind.
+
+In der gängigen Literatur wird meist nur auf die Anwendung von agilen Vorgehensmodellen in klassischen Bereichen eingegangen.
+Insbesondere die sicherheitskritischen Bereiche, wie die Luft- und Raumfahrtindustrie, nutzen noch klassische Vorgehensmodelle.
+Hier stellt sich die Frage, wie und ob diese Bereiche auch von den agilen Vorgehensmodellen profitieren könnten.
 
 Die Relevanz der Fragestellung ergibt sich aus der Tatsache, dass gerade diese Bereiche oft unter hohen Lieferverzögerungen und Kostenüberschreitungen leiden.
+Außerdem befindet sich beispielsweise die Raumfahrtindustrie in einem Wandel, da immer mehr private Unternehmen auf diesen Markt drängen, was einen erhöhten Wettbewerbsdruck verursacht.
 Zwar finden sich zu den Themen agile Vorgehensmodelle und DevOps eine Vielzahl von Veröffentlichungen, jedoch nur sehr wenige beschäftigen sich mit der Anwendung und den Schwierigkeiten in sicherheitskritischen Bereichen.
 
 \section{Zielsetzung}
 
-Die vorliegende Arbeit soll untersuchen, wie sich die Implementierung der agilen Entwicklung und deren Methoden auf sicherheitskritische Bereiche erweitern lässt.
-Außerdem soll geklärt werden, wie DevOps durch agile Methoden profitieren und in sicherheitskritischen Bereichen angewendet werden kann.
+Die vorliegende Arbeit soll untersuchen, wie und unter welchen Voraussetzungen sich DevOps einführen lässt und ob DevOps auch in sicherheitskritischen Bereichen Anwendung finden kann.
+Außerdem soll geklärt werden, wie sich die Anwendung von agilen Vorgehensmodelle und deren Methoden auf sicherheitskritische Bereiche erweitern lässt.
 Insbesondere soll untersucht werden, worin sich die klassischen und sicherheitskritischen Bereiche unterscheiden und welche Voraussetzungen geschaffen werden müssen, damit agile Methoden und DevOps eingeführt werden können.
-Zusätzlich werden die Auswirkungen dieser Veränderung auf die Bereiche Organisation, Entwicklungsprozess und Qualität untersucht.
+Durch Betrachtung von Fallstudien, die die Einführung von DevOps und agilen Vorgehensmodelle in sicherheitskritischen Bereichen untersuchen, soll erarbeitet werden, welche Anpassungen an den Konzepten notwendig sind, um in diesen Bereichen sinnvoll eingesetzt werden zu können.
 Abschließend sollen Schlussfolgerungen und Handlungsempfehlungen für sicherheitskritische Bereiche und insbesondere die Luft- und Raumfahrtindustrie formuliert werden.
 
 
@@ -37,11 +38,10 @@ Die grundlegenden Themen agile Entwicklung und DevOps finden sich in vielen Ver�
 
 \section{Gang der Untersuchung}
 
-Die Arbeit beginnt mit einer umfassenden Einführung in die Grundlagen.
-Dabei sollen klassische und agile Vorgehensmodelle vorgestellt werden.
-Des Weiteren wird der Begriff DevOps eingeführt.
-Zur Erreichung der Ziele dieser Arbeit, werden \emph{klassische} und \emph{sicherheitskritische} Bereiche bezüglich objektiver Faktoren verglichen.
-Abschließend bieten die Grundlagen eine Erläuterung von messbaren Leistungskennzahlen, die zur Erfolgsmessung der Vorgehensmodelle und DevOps in den Bereichen eingesetzt werden können.
+Die Arbeit beginnt mit einer umfassenden Einführung in die Grundlagen,
+die klassische und agile Vorgehensmodelle vorstellt.
+Anschließend wird der Begriff DevOps eingeführt.
+Zur Erreichung der Ziele dieser Arbeit, werden \emph{klassische} und \emph{sicherheitskritische} Bereiche bezüglich dem Sicherheitsanspruch, den Normen, den konkreten Entwicklungspraktiken und der Time To Market verglichen.
 
 Zur Suche wird auf die Quellen HTWG Bibliothek \parencite[vgl.][]{HTWG2015aa}, Google Scholar \parencite[vgl.][]{Google2015aa} und Google \parencite[vgl.][]{Google2015ab} zurückgegriffen.
 Unter anderem werden die Stichwörter (und deren englische Entsprechung)
@@ -59,4 +59,5 @@ Unter anderem werden die Stichwörter (und deren englische Entsprechung)
 \item DevOps Stichwörter HIER ERGÄNZEN
 \end{itemize}
 zur Literatursuche benutzt.
-Die gefundene Literatur dient als weitere Quelle für relevante Literatur, indem Zitate und Quellenverweise vorwärts (wer hat zitiert?) und rückwärts (wer wurde zitiert?) durchsucht werden.
+Die gefundene Literatur dient als weitere Quelle für relevante Literatur, indem Zitate und Quellenverweise rückwärts durchsucht werden.
+
