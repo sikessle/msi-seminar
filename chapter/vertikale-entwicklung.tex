@@ -1,48 +1,159 @@
 \chapter{Vertikale Evolution} % 13 Seiten
-
-Hier sollten wir erörtern,
+Dieses Kapitel betrachtet die vertikale Evolution der agilen Softwareentwicklung. Wie bereits erörtert, befinden sich Vorgehensweisen und Prozesse in einem stetigen Wandel. Agile Vorgehensweisen haben viele Probleme der Softwareentwicklung bereits gelöst, sind jedoch nur auf diesen Bereich beschränkt. DevOps hingegen umfasst einige weitere Ebenen, wodurch sich deutlich umfangreichere Möglichkeiten ergeben. Diese werden nachfolgend betrachtet.
 
 \section{Abgrenzung zu Lean und Agile} % 1 Seite
+Neben DevOps besteht noch eine Vielzahl an weiteren Prozessen und Vorgehensweisen, welche verwandt, aufbauend, oder vollkommen eigenständig sind. Zwei der am weitest verbreiteten sind agile Entwicklung und Lean. Beide werden oft im Zusammenhang mit DevOps genannt. Manchmal werden diese jedoch fälschlicherweise synonym verwendet. Daher erfolgt zuerst eine Abgrenzung zu diesen beiden Vorgehensweisen.
 
 \subsection{Lean}
+Die Lean Bewegung, geprägt von Eric Ries und dessen Buch \glqq The Lean Startup\grqq, verfolgt die Idee, der Prozessoptimierung und Konzentration auf Kernideen. Hierbei wird versucht, den Prozess von der Idee, über Ausarbeitung und Testing, hin zum fertigen Feature möglichst schlank und ressourcenschonend zu halten. Dies ist besonders im Start Up Umfeld sehr interessant, da dort finanzielle Mittle meist recht knapp bemessen sind und die Produkte noch nicht genau definiert sind. Mit Hilfe von Lean kann frühzeitig Kundenfeedback eingeholt werden, was die Entwicklung des Produkts und die Definition eines Zielmarkts deutlich vereinfacht.
+Lean verfolgt den Ansatz, sich auf einige wenige Kernideen zu konzentrieren und nur Probleme zu lösen, die in Zusammenhang mit diesen stehen und deren Lösung sich lohnt. (NACHWEIS)
+Da es sich bei Lean, manchmal auch Lean Management genannt, um Optimierung von Prozessen und Organisation handelt, findet sich diese Vorgehensweise auch außerhalb der IT wieder.
 
 \subsection{Agile}
+Agile Softwareentwicklung ist, wie bereits beschrieben, eine iterativ, inkrementelle Vorgehensweise. Hierbei werden lauffähige Prototypen und kurzen Zyklen erstellt und dem Kunde präsentiert. Dadurch besteht die Möglichkeit, Feedback des Kunden bereits frühzeitig einzuholen und darauf zu reagieren. Bedingt durch das iterative Vorgehen kann viel flexibler auf Änderungen der Spezifikation eingegangen werden und die Cost Of Change bleiben gering. Der Fokus liegt dabei auf Kollaboration mit dem Kunden und Bestreben, möglichst früh tatsächlichen Wert für den Kunden zu erzeugen. (NACHWEIS) Agile Vorgehensmodelle umfassen allerdings keine weiteren Bereiche wie beispielsweise Betrieb, oder Management, sondern sind nur auf die Entwicklung von Software beschränkt.
 
-\subsection{Unterschiede}
+\subsection{DevOps}
+DevOps baut auf die beiden oben genannten Vorgehensmodelle Lean und Agile auf, geht aber über deren jeweiligen Umfang hinaus. So beinhaltet DevOps beispielsweise das Lean Prinzip der Optimierung der Durchlaufzeiten, oder das Agile Prinzip der möglichst frühen Generierung von Wert für den Kunden. DevOps konzentriert sich aber nicht nur auf die technischen Aspekte, sondern auch auf die organisatorischen und kulturellen Ebenen. Hierbei stehen Kollaboration von Entwicklung und Betrieb und kultureller Wandel im Vordergrund.
+Es muss jedoch beachtet werden, dass eine optimal funktionierende Lösung oftmals aus der Anwendung einer Kombination und nicht nur aus einem der drei Modelle besteht.
 
-
-\section{Anwendung von DevOps in der Praxis} % 3 Seite
+\section{Anwendung von DevOps in der Praxis} % 3 Seiten
+Da es sich bei DevOps um ein Vorgehensmodell und nicht um ein fertig verfügbares Produkt handelt, kann die Anwendung in der Praxis, je nach Bedarf, viele unterschiedliche Formen annehmen. Nachfolgend werden beispielhaft die meist verbreiteten Möglichkeiten der Umsetzung dieser Praktiken vorgestellt.
 
 \subsection{Organisatorisch}
+keine getrennten Abteilungen (Dev, Op, QS)
+keine Silos!
+gemeinsames Management
+Allrounder statt Spezialisten
 
 \subsection{Technisch}
+Artefakte an zentraler Stelle
+Source Code Verwaltung: Git
+Pipeline Herzstück (Testing, Infrastruktur, da als Software)
+Automatisierung: Jenkins
+Infrastructure as Software: Chef, Puppet
+Deployment: Docker
+Docker:
+- Entwicklung auf original Systemen im Kleinformat
+- keine Überraschungen bei Deployment
+- Isolation von Anwendungen in virtualisierten OS (Sicherheit + einfaches Deployment)
+Produktionsumgebung neu und automatisiert aufbauen
+sehr hohe Qualität
+schnell Zyklen
+schnelle Recovery
+
 
 \subsection{Kulturell}
+Arten von Organisationen nach Westrum (1988)
+“Macht-orientiert”: wenig Kooperation, wenig Innovation, kein Scheitern akzeptiert
+“Bürokratisch”: genau definierte Verantwortlichkeiten, Angst vor Neuerungen
+“Generativ / Leistungs-orientiert”: viel Kooperation, geteilte Risiken, Fehlerverzeihend, Innovativ, gemeinsames Ziel
+gemeinsames Ziel
+Zusammenarbeit \& Kommunikation
+Jeder hat Verantwortung für Qualität, Verfügbarkeit und Sicherheit, nicht einzelne Abteilungen!
+Scheitern ist akzeptiert / erwünscht
 
 
-\section{DevOps im Projektmanagement und ITIL} % 2 Seite
+\section{DevOps im Projektmanagement und ITIL} % 2 Seiten
+Koexistenz
+DevOps ersetzt IT-Management / ITIL nicht!
+Erfordert Anpassungen im Management
+Kann parallel zu ITIL eingesetzt werden
+Vor allem Einführung einer generativen Organisationskultur
 
 \subsection{Projektmanagement}
+Management
+keine getrennten Abteilungen - ein Team
+Auflösung der Silos - gemeinsame Verwaltung
+Projektplanung: keine getrennten Phasen für Qualitätssicherung, etc.
+Zeit einplanen für automatisierte Test
+Demonstration: lauffähiger Prototyp -> demonstrieren, statt regelmäßig Bericht erstatten
+Failure: mit dem Schlimmsten rechnen
+schnelle Recovery (bringt DevOps im Idealfall mit)
 
 \subsection{ITIL}
+DevOps kein ITIL Ersatz
+Verwendung in geeigneten Bereichen
+- Vorteil durch Automatisierung und verbesserte Zusammenarbeit am größten sind
+
+Vorgehensweise
+- wichtigste ITIL Prozesse identifizieren in geeigneten Bereichen
+- Review der Prozesse mit beteiligten Abteilungen (workshopartig)
+- Identifizierung der Schwachstellen: meisten Kosten bei Fehlern?
+- Wo kann Automatisierung und Kollaboration helfen?: nicht mehr Highlevel, sondern konkret (exakte Umsetzung)
+- Priorisierung und Umsetzung
 
 
-\section{Optimierungspotentiale und Verbreitung} % 1 Seite
+\section{Optimierungspotentiale und Verbreitung} % 1 Seiten
 
 \subsection{Optimierungspotentiale}
+Gartner
+Einsatz verstärkt in Cloud und Mobile Branchen
+IT-Führungskräfte befragt
+Was hat Einführung von DevOps gebracht?
+Schnellere Time to Market
+Wiederverwendung / Automatisierung: Risikominimierung, Einsparung von Entwicklungsaufwand
 
 \subsection{Verbreitung}
+... siehe Bubbles
 
 
-\section{Aktuelle Entwicklung von DevOps} % 3 Seite
+\section{Aktuelle Entwicklung von DevOps} % 3 Seiten
+Bisher:
+Nicht Teil des automatisierten Prozesses
+Auf Entwicklung folgendes “Bottleneck”
 
 \subsection{DevOps und Sicherheit}
+Integration von Sicherheit in Pipeline: automatisierte Sicherheitstests
+
+keine manuellen Änderungen am System (Überschreiben)
+keine Updates -> nur Upgrades (neue Version)
+Phoenix Upgrades / Blue-Green Upgrades
+
+Immutable Infrastructure / Wegwerf Infrastruktur
+Trennung von Daten und Infrastruktur (Rechte)
+
+Auditierung und Compliance vereinfacht
+- vereinfacht
+- alles zentral und versioniert
+- alle Änderungen protokolliert
+- genau definierter Zustand
+- Compliance Tests in Pipeline
+
+Security as Software
+- Vision
+- komplette Sicherheit in Pipeline
+- Automatisierung nicht einfach
+- erfordert gewisse Abstraktion
 
 
-\section{Fallstudie} % 3 Seite
+\section{Fallstudie} % 3 Seiten
+Nordstrom Fashion Retailer
 
 \subsection{Einführung}
+getrennte Abteilungen
+lange Update Zyklen
+langsame Reaktion auf Probleme
+Homepage Upgrade (über Nacht, Ausfallzeiten)
+Kassensystem Server Upgrade (Lange Dauer, Vor-Ort-Einsatz)
 
 \subsection{Optimierungspotentiale durch DevOps}
+in kleinem Bereich
+Bezahlsysteme in den Läden
+Virtualisierung der Bezahlsysteme
+Virtualisierung -> einfaches Deployment (keine Arbeit vor Ort)
+Windows Server 2003
+
+Einsparung von Arbeitszeit und Aufwand
+Kürzere Ausfallzeiten
+schnellere Recovery
 
 \subsection{Durchführung und Ergebnis}
+Entwickler der Server, Datenbank, Website
+Operations Leute, die vor Ort arbeiten
+
+einige Wochen Arbeit
+vollautomatisierte Erstellung in 4h statt 18h Arbeit vor Ort
+Wiederholbar
+Tests in Entwicklung
+Entwicklung an original Systemen
+Erfahrungen gesammelt, um Entwicklung des Herzstücks, der Homepage, zu automatisieren
