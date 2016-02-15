@@ -90,36 +90,30 @@ Bürokratische Organisationen zeichnen sich dadurch aus, dass jede Abteilung und
 In generativen und leistungsorientierten Organisationen findet hingegen sehr viel Kooperation und Kollaboration statt. Es herrscht ein fehlerverzeihendes Umfeld, in dem Mitarbeiter dazu ermutigt werden, Risiken einzugehen und eventuell zu scheitern, da alle Mitarbeiter dadurch lernen können. Mitarbeiter arbeiten an einem gemeinsamen Ziel und teilen die dabei entstehenden Risiken, anstatt sie einzelnen Abteilungen, oder Personen zuzuschreiben. In einer solchen Organisation existiert keine Art der \glqq über die Mauer werfen\grqq Mentalität, bei der Probleme \glqq über die Mauer\grqq an andere Abteilungen weitergegeben werden, ohne diese zu lösen, um eigenen Ressourcen zu schonen. Jeder Mitarbeiter hat eine Verantwortung für die Qualität, die Verfügbarkeit und die Sicherheit des Produkts. Ein solches Umfeld fördert Innovation und das Beschreiten neuer Wege.\\
 DevOps strebt eine generative und leistungsorientierte Organisationskultur an, bei der Mitarbeiter, besonders die der Abteilungen Entwicklung, Qualitätssicherung und Betrieb in hohem Maße kollaborieren und kommunizieren. Durch die Zusammenfügung verschiedener Abteilungen wird das Risiko auf alle Mitarbeiter gleichermaßen verteilt und alle sind für die Qualität des Produkts verantwortlich. Nur so lässt sich ein innovatives und effizientes Umfeld aufbauen, weshalb die kulturelle Ebene für DevOps von so großer Wichtigkeit ist.
 
-\newpage
-
 \section{DevOps im Projektmanagement und ITIL} % 2 Seiten
 Nachdem im vorangegangenen Abschnitt auf die praktische Umsetzung von DevOps eingegangen wurde, wird nun betrachtet, welche Anpassungen in Organisationen vorgenommen werden müssen, in denen andere Vorgehensmodelle eingesetzt werden und DevOps zum Einsatz kommen soll.
 
 \subsection{Projektmanagement}
-
-
-
-Management
-kein ersatz, sondern Anpassungen
-keine getrennten Abteilungen - ein Team
-Auflösung der Silos - gemeinsame Verwaltung
-Projektplanung: keine getrennten Phasen für Qualitätssicherung, etc.
-Zeit einplanen für automatisierte Test
-Demonstration: lauffähiger Prototyp -> demonstrieren, statt regelmäßig Bericht erstatten
-Failure: mit dem Schlimmsten rechnen
-schnelle Recovery (bringt DevOps im Idealfall mit)
+Um DevOps in einer Organisation einzusetzen, müssen entsprechende Anpassungen im Projektmanagement vorgenommen werden. Da DevOps keine Praktiken für Projektmanagement beinhaltet, kann hier auf bereits bestehende Vorgehensmodelle aufgebaut werden. Die umfangreichste Anpassung ist die Aufhebung der Trennung der Abteilungen der Entwicklung, der Qualitätssicherung und des Betriebs. Hierbei müssen die bestehenden Silos aufgelöst werden und ein gemeinsames Management für das gesamte Team geschaffen werden.\\
+Bei der Projektplanung muss beim Einsatz von DevOps berücksichtigt werden, dass keine getrennten Phasen für Qualitätssicherung und Testen notwendig sind, sondern stattdessen Zeit für die Erstellung und Einbindung automatisierter Tests in die Entwicklungsphase eingeplant werden muss.\\
+Durch den Einsatz von DevOps besteht zudem die Option, Fortschritt nicht nur in Textform als Bericht, sondern in Form lauffähiger Prototypen zu demonstrieren. Dies ist eine der wichtigsten Eigenschaften agiler Vorgehensmodelle, bei denen zum Sprint Ende, im Durchschnitt alle zwei Wochen, ein solcher Prototyp an den Kunde ausgeliefert wird. Mit Hilfe von DevOps ist es möglich, Prototypen mehrmals am Tag zu erzeugen. Mittels der automatisierten Pipeline entsteht aus jeder Änderung ein solcher Prototyp.\\
+Ein weiterer Vorteil, den der Einsatz von DevOps mit sich bringt, ist das \glqq Design for Failure\grqq. In klassischen Projekten muss eine Fehlerstrategie extra erarbeitet werden. Bei DevOps besteht diese zum einen aus Standardisierung und Protokollierung jeglicher Änderungen, wodurch Fehlersuche sehr stark vereinfacht. Zum anderen besteht diese Strategie aus einem sehr schnellen Recovery, bedingt durch den hohen Grad an Automatisierung. Im Falle eines Fehlers, oder eines Ausfalls kann ein neues System automatisiert in kürzester Zeit neu ausgeliefert werden. Dies ist besonders bei cloudbasierten Diensten, oder Webapplikationen wie Online Shops von besonderer Bedeutung, da hier Ausfallzeiten besonders hohe finanzielle Auswirkungen haben. (NACHWEIS)
 
 \subsection{ITIL}
-DevOps kein ITIL Ersatz
-Verwendung in geeigneten Bereichen
-- Vorteil durch Automatisierung und verbesserte Zusammenarbeit am größten sind
+ITIL ist im Bereich des IT Managements ein internationaler \glqq De-facto-Standard\grqq und findet daher in vielen IT Abteilungen Anwendung. Um DevOps in solch einem Umfeld einsetzen zu können, müssen keine vollkommen neuen Strukturen geschaffen werden, sondern DevOps kann parallel zu ITIL eingesetzt werden. Dies ist ein großer Vorteil von DevOps, da die Veränderung vorhandener Strukturen mit Kosten verbunden ist. So kann DevOps zunächst in geeigneten Bereichen getestet werden und bei Bedarf ausgebaut werden.\\
+Zur Einführung von DevOps in ITIL orientierte Bereiche wurde folgende Vorgehensweise entwickelt:
 
-Vorgehensweise
-- wichtigste ITIL Prozesse identifizieren in geeigneten Bereichen
-- Review der Prozesse mit beteiligten Abteilungen (workshopartig)
-- Identifizierung der Schwachstellen: meisten Kosten bei Fehlern?
-- Wo kann Automatisierung und Kollaboration helfen?: nicht mehr Highlevel, sondern konkret (exakte Umsetzung)
-- Priorisierung und Umsetzung
+\begin{itemize}
+\item Identifizierung der ITIL Prozesse
+\item Review der Prozesse
+\item Identifizierung der Schwachstellen
+\item Konkrete Planung
+\item Priorisierung und Umsetzung
+\end{itemize}
+
+(NACHWEIS)
+
+Zunächst werden geeignete Bereiche im entsprechenden Umfeld identifiziert, in denen ein ausreichend großer Vorteil durch Automatisierung und verbesserte Zusammenarbeit entstehen kann. Daraufhin werden die wichtigsten ITIL Prozesse in diesen Bereichen identifiziert. Nach diesem Schritt werden die ausgewählten ITIL Prozesse einem Review unterzogen. Dieser findet mit allen an diesen Prozessen beteiligten Abteilungen statt. Nur so kann sichergestellt werden, dass der Einsatz von DevOps an dieser Stelle optimal und ohne Verlust ist. Um den Aufwand und die Dauer hierbei in Grenzen zu halten, können diese Reviews als Workshop veranstaltet werden. Auf das Review folgt nun die Identifizierung der Schwachstellen der jeweiligen ITIL Prozesse. Hierbei liegt der Fokus darauf, welche Fehler den höchsten Schaden verursachen können. Dabei werden die Eintrittswahrscheinlichkeit und die Kosten im Falle eines Fehlers untersucht. Anschließend werden konkrete Maßnahmen definiert, wie in diesen Prozessen Automatisierung und Kollaboration gewinnbringend eingesetzt werden können. Dies geschieht nun auf einem niedrigeren Abstraktionsniveau und liefert als Ergebnis die tatsächlich geplante Umsetzung. In einem letzten Schritt folgt eine Priorisierung der einzelnen ITIL Prozesse und Maßnahmen und die tatsächliche Umsetzung.
 
 
 \section{Optimierungspotentiale und Verbreitung} % 1 Seiten
