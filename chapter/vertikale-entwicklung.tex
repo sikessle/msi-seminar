@@ -132,34 +132,24 @@ Die Optimierungspotentiale von DevOps kommen größtenteils durch den hohen Grad
 \subsection{Verbreitung}
 DevOps war in den Anfangsjahren eher eine Nischen Bewegung, die hauptsächlich in Cloud und Mobile Bereichen zum Einsatz kam. In den Jahren 2014 und 2015 hat das Wachstum der Verbreitung stark zugenommen \parencite[Vgl.][]{DevOpsSODR:2014}, \parencite[Vgl.][]{DevOpsSODR:2015}. Dem Gartner Report \parencite[Vgl.][]{Gartner:2015} zufolge wird das Wachstum von DevOps im Verlauf des Jahres 2016 weiter stark zunehmen und zu einer Verbreitung von 25 Prozent weltweit führen.
 
-
 \section{Aktuelle Entwicklung von DevOps} % 3 Seiten
-Bisher:
-Nicht Teil des automatisierten Prozesses
-Auf Entwicklung folgendes “Bottleneck”
+Die DevOps Bewegung ist eine selbst für Informatik Verhältnisse noch junge Bewegung, deren Entwicklung in stetigem Wandel ist und noch lange nicht abgeschlossen ist. Aktuelle Entwicklungen beschäftigen sich mit der Integration von Sicherheit in den Prozess. Diese Entwicklung ist für diesen Bericht auch daher von Interesse, da hier einer der Unterschiede zu den bereits etablierteren agilen Vorgehensmodellen gesehen werden kann. Insbesondere zu den weiterentwickelten Modellen, die im Kapitel \glqq Horizontale Evolution\grqq betrachtet werden und die Sicherheit als eines ihrer Kernelement bereits enthalten.
 
 \subsection{DevOps und Sicherheit}
-Integration von Sicherheit in Pipeline: automatisierte Sicherheitstests
+Bisherige praktische Umsetzungen der DevOps Praktiken, insbesondere auf technischer Ebene in Form von automatisierte Pipelines, beinhalteten keine sicherheitsrelevanten Elemente. Sicherheit wurde, wie in der klassischen Entwicklung, als ein auf die Entwicklung folgender \glqq Flaschenhals\grqq betrachtet. Da die Geschwindigkeit in klassischen, oder auch agilen Vorgehensmodellen, deutlich unter der Geschwindigkeit von DevOps lag, fiel dies bisher nicht so stark ins Gewicht. Mit stark verkürzten Durchlaufzeiten und einer immer kürzeren Time To Market wird die fehlende Integration von Sicherheit in die DevOps Prozesse zu einem immer größeren Problem, das die Entwicklung stark ausbremst. Allerdings bietet DevOps einige sehr gute Eigenschaften, welche den Aufbau einer performanten Sicherheitsstrategie sehr gut unterstützen. Hierzu müssen beim Einsatz von DevOps bereits vorhandene Sicherheitsstrategien angepasst werden.
 
-keine manuellen Änderungen am System (Überschreiben)
-keine Updates -> nur Upgrades (neue Version)
-Phoenix Upgrades / Blue-Green Upgrades
+\subsubsection{Automatisierte Sicherheit}
+Ein Element von DevOps, welches zu einer performanten Sicherheitsstrategie beiträgt, ist automatisierte Auslieferung. Somit ist sichergestellt, dass alle sicherheitsrelevanten Konfigurationen auf allen Systemen immer exakt identisch sind. Zudem können Sicherheitstests in die Pipeline integriert werden, wodurch alle Änderungen, die am System vorgenommen werden, automatisch überprüft werden.\\
+Systeme, die in Organisationen entwickelt werden, die DevOps Praktiken einsetzen, werden automatisiert konfiguriert und installiert. An bereits installierten Systemen werden keine manuellen Änderungen durchgeführt. Wenn es in der Entwicklung zu einer Änderung kommt, wird diese durch die automatisierte Pipeline verarbeitet, getestet und auf die entsprechenden Systemen ausgeliefert. Es gibt bei der Verwendung von DevOps keine Updates mehr, sondern nur noch Upgrades. Diese Art von Upgrade ist auch als \glqq Phoenix Upgrade\grqq bekannt. Dabei wird das System bei jedem Upgrade vollständig neu ausgeliefert und installiert. Dieses Vorgehen zieht keinen zusätzlichen Aufwand nach sich, da all diese Vorgängen automatisiert ausgeführt werden.Für die Sicherheit des Systems bedeutet solch ein Vorgehen jedoch einen großen Vorteil gegenüber bisherigen Systemen. So können jegliche Artefakte des Systems über entsprechende Rechtevergabe als unveränderlich konfiguriert werden. Sollte ein Angreifer Zugriff auf ein solches System erlangen, kann er keine Manipulationen an diesem durchführen.\\
+Bei DevOps wird auch, wie bereits erwähnt, die Konfiguration als Teil des Systems gesehen. Diese wird mittels Virtualisierung in Form von Software entwickelt und verwaltet. Auf diese Art und Weise können Konfigurationsartefakte, genauso wie Systemartefakte, mit unveränderlichen Rechten auf dem Endsystem ausgestattet werden. Da diese ebenso nur per Upgrade, jedoch niemals per Update verändert werden, greift auch dort diese Art der Sicherung vor Manipulation. Diese Art der Konfiguration wird auch als \glqq Immutable Infrastructure\grqq, oder \glqq Wegwerf Infrastruktur\grqq (NACHWEIS) bezeichnet.\\
+Ein weiterer Aspekt von DevOps, der weniger der direkten Bedrohung durch Angreifer entgegenwirkt, sondern viel mehr die Verfügbarkeit von Systemen betrifft, ist die automatisierte Auslieferung. Wie bereits im Abschnitt der \glqq Optimierungspotentiale\grqq erwähnt, lässt sich mit deren Hilfe die Time To Recover deutlich reduzieren. Es besteht jedoch auch die Möglichkeit, Upgrades des Systems möglichst sicher auszuliefern, sodass die Ausfallzeiten Idealfall bei Null liegen. Dies ist besonders relevant für die E-Commerce Branche. Diese besondere Art des Upgrades ist bekannt unter dem Namen \glqq Blue-Green Upgrade\grqq. (NACHWEIS) Dabei wird ein Upgrade zunächst nur auf ein Teil des Systems ausgeliefert. Das System ist zu diesem Zeitpunkt in alter Version immer noch erreichbar. Falls das Upgrade ohne Probleme funktioniert hat und entsprechende Systemtests bestanden wurden, kann auf das neue System umgestellt werden und der alte Teil des Systems ebenfalls per Upgrade aktualisiert werden. Sollte der Upgrade fehlschlagen kann die alte Version, da diese in der Versionsverwaltung vorliegt, schnell wiederhergestellt werden. Durch dieses Vorgehen ist das System jederzeit erreichbar und Upgrades können performant und sicher durchgeführt werden.\\
+Grundsätzlich besteht auch ohne DevOps die Möglichkeit, ein solches Upgrade durchzuführen. Allerdings ist dies bei manueller Durchführung deutlich langsamer und kostenintensiver, da das Upgrade jedes Elements des Systems manuell durchgeführt werden muss. Zudem müssen für die Übergangsphase, in der Teile des Systems eine alte und Teile des Systems eine Version besitzen, oftmals extra Systeme angemietet werden. Diese Kosten sind bei automatisierten Auslieferung deutlich geringer. Ein Rollback auf einer ältere Version ist manuell nur schwer möglich, da im Normalfall nicht genau dokumentiert ist, ob und welche manuellen Änderungen, oder Updates am System vorgenommen wurden. Somit kann es unter Umständen unmöglich sein, eine alte Version wieder exakt herzustellen.\\
 
-Immutable Infrastructure / Wegwerf Infrastruktur
-Trennung von Daten und Infrastruktur (Rechte)
+\subsubsection{Auditierung und Compliance}
+Auditierung und Compliance können mitunter sehr kosten- und zeitintensiv sein. Auch hierbei kann der Einsatz von DevOps Zeit und damit Kosten sparen, da Auditierung und Compliance vereinfacht werden können. Da alle Artefakte zentral in einer Versionsverwaltung gespeichert und verwaltet werden, werden alle Änderungen genau protokolliert. Zudem befindet sich das System jederzeit in einem genau definierten Zustand, der über die Artefakte bestimmt werden kann. In bisherigen Modellen und Prozessen sind nicht alle Artefakte zentral verwaltet, wodurch nicht alle Änderungen protokolliert werden und der Zustand des Systems aufwendig bestimmt werden muss. Auditierungen mit Hilfe von DevOps deutlich optimierter durchgeführt werden. Die automatisierte Pipeline von DevOps bietet zudem die Möglichkeit, nicht nur automatisierte Sicherheitstests zu integrieren, sondern auch automatisierte Compliance Tests zu integrieren. Dadurch kann sichergestellt werden, dass alle Änderungen, die am System vorgenommen werden, mit den Compliance Vorgaben übereinstimmen.\\
 
-Auditierung und Compliance vereinfacht
-- vereinfacht
-- alles zentral und versioniert
-- alle Änderungen protokolliert
-- genau definierter Zustand
-- Compliance Tests in Pipeline
-
-Security as Software
-- Vision
-- komplette Sicherheit in Pipeline
-- Automatisierung nicht einfach
-- erfordert gewisse Abstraktion
+\subsubsection{Security as Software}
+Wie bereits erwähnt liegt dieser Bereich von DevOps aktuell im Fokus der Entwicklung. Die Vision, auf die hingearbeitet wird, ist \glqq Security as Software\grqq. Ziel dieser Vision ist die vollständige Integration der Sicherheit eines Systems in die automatisierte Pipeline. Da diese softwarebasiert ist, müssen alle Elemente des Sicherheitssystems in Form von Software vorliegen. Da Automatisierung immer einen gewissen Grad an Abstraktion fordert, ist dieses Vorhaben entsprechend komplex. Erste Schritte sind mit \glqq Infrastructure as Software\grqq, der damit verbundenen \glqq Immutable Infrastructure\grqq, \glqq Phoenix Upgrades\grqq und ersten automatisierten Sicherheitstests als Teil der Pipeline bereits getan. Sollte hier ein Durchbruch und damit die vollständige Integration der Sicherheit in die Pipeline gelingen, so würde dies die Vorteile von DevOps und dessen Attraktivität noch deutlich erhöhen und dessen Anwendbarkeit deutlich erweitern.
 
 
 \section{Fallstudie} % 3 Seiten
