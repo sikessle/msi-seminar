@@ -9,7 +9,7 @@ Die Lean Bewegung, begründet im Lean Manufacturing und im IT Bereich geprägt v
 Hierbei wird versucht, den Prozess von der Idee, über Ausarbeitung und Testing, hin zum fertigen Feature möglichst schlank und ressourcenschonend zu halten. 
 Dies ist besonders im Startup Umfeld sehr interessant, da dort finanzielle Mittle meist recht knapp bemessen sind und die Produkte noch nicht genau definiert sind. 
 Mit Hilfe von Lean kann frühzeitig Kundenfeedback eingeholt werden, was die Entwicklung des Produkts und die Definition eines Zielmarkts deutlich vereinfacht.
-Lean verfolgt den Ansatz, sich auf einige wenige Kernideen zu konzentrieren und nur Probleme zu lösen, die in Zusammenhang mit diesen stehen und deren Lösung sich lohnt. \parencite[Vgl.][S. 18 ff.]{ries:2011}
+Lean verfolgt den Ansatz, sich auf einige wenige Kernideen zu konzentrieren und nur Probleme zu lösen, die in Zusammenhang mit diesen stehen und deren Lösung sich lohnt. \parencite[Vgl.][S. 15 - 24]{ries:2011}
 
 Da es sich bei Lean, manchmal auch Lean Management genannt, um Optimierung von Prozessen und Organisation handelt, findet sich diese Vorgehensweise auch außerhalb der IT wieder.
 
@@ -43,30 +43,16 @@ DevOps ist lediglich ein Vorgehensmodell, oder eine Sammlung von Praktiken, in d
 Einige dieser Tools stammen ursprünglich aus verwandten Bewegungen, oder wurden von anderen Bewegungen übernommen. 
 Die Popularität einiger dieser Tools außerhalb von DevOps trägt sicherlich auch zur Verbreitung von DevOps bei.
 
-%\begin{figure}[hp]
-%  \centering
-%  \includegraphics[width=0.2\textwidth]{img/git_logo.png}
-%  \caption{Git Versionsverwaltung \parencite[][]{Git:2016}}
-%  \label{fig:git}
-%\end{figure}
-
 Bei DevOps werden alle in der Produktion entstandenen Artefakte an einer zentralen Stelle verwaltet. 
 Dies geschieht in den meisten Fällen mit einer sogenannten Versionsverwaltung. 
 Der Vorteil solcher Tools liegt darin, dass kollaborativ und ortstransparent an Artefakten gearbeitet werden und jegliche Änderungen genau dokumentiert werden. 
 Somit befindet sich ein damit verwaltetes System immer in einem genau definierten Zustand. 
-Es besteht auch die Möglichkeit, Änderungen ohne großen Aufwand rückgängig zu machen, oder unterschiedliche Versionen parallel zu verwalten.
+Es besteht auch die Möglichkeit, Änderungen ohne großen Aufwand rückgängig zu machen, oder unterschiedliche Versionen parallel zu verwalten. \parencite[Vgl.][S. 9]{fisher-miranda:2014}
 
 Ein sehr bekannter Vertreter dieser Gattung von Tools ist Git. 
 Es wurde entwickelt von Linus Torvalds, dem Erfinder von Linux, und hat sich mittlerweile zu einem sehr weit verbreiteten Versionsverwaltungstool entwickelt. 
 Eines der Kernfeature ist die dezentrale Speicherung von Entwicklerrepositories, die es ermöglichen ortstransparent und effizient im Team zu kollaborieren. 
-\parencite[Vgl.][S. 31 ff.]{loeliger:2012}
-
-%\begin{figure}[ht]
-%  \centering
-%  \includegraphics[width=0.2\textwidth]{img/jenkins_logo.png}
-%  \caption{Jenkins Automatisierung \parencite[][]{Jenkins:2016}}
-%  \label{fig:jenkins}
-%\end{figure}
+\parencite[Vgl.][S. 29 - 44]{loeliger:2012}
 
 Basierend auf dem Lean Prinzip der Optimierung, wird bei DevOps nicht nur die Organisation und Kollaboration optimiert, sondern auch auf technischer Ebene Entwicklung und Auslieferung. 
 Als zentrales Element kommt hierbei oftmals eine Pipeline, in Form eines Continuous Integration Servers zum Einsatz. 
@@ -78,23 +64,9 @@ So kann er beispielsweise auf Änderungen in einer Versionsverwaltung reagieren 
 Dabei können automatisierte Tests ausgeführt werden und das fertige Produkt auf verschiedene Systeme ausgeliefert werden. 
 Die Einrichtung und Konfiguration solcher Continuous Delivery Server nimmt zu Beginn eines Projekts einige Zeit in Anspruch. 
 Die zeitliche Ersparnis durch die vielen Möglichkeiten der Automatisierung gleichen diesen Aufwand aber wieder um ein Vielfaches aus. 
-\parencite[Vgl.][S. 65 ff.]{smart:2011}
+\parencite[Vgl.][S. 79 - 134]{smart:2011}
 
 Continuous Integration Server bilden die Kerntechnologie bei DevOps, um eine schnelle Time To Market, schnelles Recovery nach Fehlerfällen, hohe Produktqualität und kurze Entwicklungszyklen zu erreichen.
-
-%\begin{figure}[ht]
-%  \centering
-%  \includegraphics[width=0.2\textwidth]{img/chef_logo.png}
-%  \caption{Chef Konfigurationsverwaltung \parencite[][]{Chef:2016}}
-%  \label{fig:chef}
-%\end{figure}
-
-%\begin{figure}[ht]
-%  \centering
-%  \includegraphics[width=0.25\textwidth]{img/puppet_logo.png}
-%  \caption{Puppet Konfigurationsverwaltung \parencite[][]{Puppet:2016}}
-%  \label{fig:puppet}
-%\end{figure}
 
 Ein weiteres Tool, welches Teil der Automatisierung ist und sehr gut mit einem Continuous Integration Server zusammen arbeitet ist eine Konfigurationsverwaltung. 
 Diese Tools ermöglichen es, Konfigurationen zentral zu verwalten und automatisiert ablaufen zu lassen. 
@@ -105,14 +77,7 @@ Mit Hilfe von Konfigurationsverwaltungen erfolgt die Konfiguration aller System 
 Somit sinkt der Aufwand bei der initialen Konfiguration, bei Updates und Upgrades und im Falle eines Fehlers deutlich. 
 Bekannteste Vertreter sind die Tools Chef und Puppet. 
 Beide bieten eine sehr ähnlichen Grundfunktionalität, sind aber spezialisiert auf unterschiedliche Einsatzgebiete. 
-\parencite[Vgl.][S. 1 ff., S. 8 ff.]{krum:2014, taylor:2014}
-
-%\begin{figure}[ht]
-%  \centering
-%  \includegraphics[width=0.4\textwidth]{img/docker_logo.png}
-%  \caption{Docker Deployment \parencite[][]{Docker:2016}}
-%  \label{fig:docker}
-%\end{figure}
+\parencite[Vgl.][S. 1 - 32, S. 1 - 8]{krum:2014, taylor:2014}
 
 Das Deployment, oder Auslieferung, bildet das abschließende Element einer automatisierten Pipeline. 
 Hier werden alle Produktionsartefakte zu einem lauffähigen System zusammengefasst und auf die entsprechende Infrastruktur ausgeliefert.
@@ -125,12 +90,12 @@ Docker ermöglicht es, ein System vollkommen identisch beliebig oft auszuliefern
 Somit kann es bei der Auslieferung von Systemen keine Probleme mehr in Form von unterschiedlichen Konfigurationen, oder Installationen geben. 
 Auch die Entwicklung profitiert von Virtualisierung, da so Betriebsumgebungen im Kleinformat zur Entwicklung genutzt werden können und es keine Unterschiede mehr zwischen Entwicklung und Betrieb gibt.
 Zudem erhöht Virtualisierung die Sicherheit, da einzelne Systeme vollständig getrennt auf dem selben Server arbeiten können und Angreifer nicht zwischen diesen wechseln können. 
-\parencite[Vgl.][S. 3 ff.]{matthias:2015}
+\parencite[Vgl.][S. 1 - 22]{matthias:2015}
 
 \subsection{Kulturell}
 Ein oft vergessener, aber durchaus wichtiger Teil von DevOps ist der kulturelle Aspekt. 
 Um diesen genauer betrachten zu können müssen zuerst die unterschiedlichen Kulturformen einer Organisation erörtert werden.
-Nach \parencite[][]{westrum:2004} gibt es drei unterschiedliche Arten von Organisationen:
+Nach \parencite[vgl.][S. 2]{westrum:2004} gibt es drei unterschiedliche Arten von Organisationen:
 
 \begin{itemize}
 \item Machtorientierte Organisationen
@@ -140,17 +105,17 @@ Nach \parencite[][]{westrum:2004} gibt es drei unterschiedliche Arten von Organi
 
 In machtorientierten Organisationen gibt es nur sehr wenig Kooperation und Kollaboration.
 Zudem wird Scheitern als sehr negativ angesehen und meist nicht akzeptiert. Mitarbeiter arbeiten nur für den eigenen Vorteil und versuchen sich selbst möglichst unentbehrlich darzustellen. 
-In einer solchen Art der Organisation gibt es nur sehr geringe, oder gar keine Innovation, da Mitarbeiter nicht gewillt sind, Risiken einzugehen und neue Richtungen einzuschlagen.
+In einer solchen Art der Organisation gibt es nur sehr geringe, oder gar keine Innovation, da Mitarbeiter nicht gewillt sind, Risiken einzugehen und neue Richtungen einzuschlagen. \parencite[vgl.][S. 2]{westrum:2004}
 
 Bürokratische Organisationen zeichnen sich dadurch aus, dass jede Abteilung und jeder Mitarbeiter genau definierte Aufgaben und Ziele haben. 
 Von diesen wird nicht abgewichen, auch wenn sich dadurch ein Vorteil für einen Einzelnen, oder das Team entstehen würde. 
-In dieser Art der Organisation herrscht oftmals Angst vor Veränderungen und Neuerungen, dementsprechend findet auch hier nur sehr geringen, oder aber gar keine Innovation statt. Kollaboration und Kooperation werden nur angewendet, wenn dies genau vorgegeben ist.
+In dieser Art der Organisation herrscht oftmals Angst vor Veränderungen und Neuerungen, dementsprechend findet auch hier nur sehr geringen, oder aber gar keine Innovation statt. Kollaboration und Kooperation werden nur angewendet, wenn dies genau vorgegeben ist. \parencite[vgl.][S. 2]{westrum:2004}
 
 In generativen und leistungsorientierten Organisationen findet hingegen sehr viel Kooperation und Kollaboration statt. 
 Es herrscht ein fehlerverzeihendes Umfeld, in dem Mitarbeiter dazu ermutigt werden, Risiken einzugehen und eventuell zu scheitern, da alle Mitarbeiter dadurch lernen können. 
 Mitarbeiter arbeiten an einem gemeinsamen Ziel und teilen die dabei entstehenden Risiken, anstatt sie einzelnen Abteilungen, oder Personen zuzuschreiben. In einer solchen Organisation existiert keine Art der \enquote{über die Mauer werfen} Mentalität, bei der Probleme \enquote{über die Mauer} an andere Abteilungen weitergegeben werden, ohne diese zu lösen, um eigenen Ressourcen zu schonen. 
 Jeder Mitarbeiter hat eine Verantwortung für die Qualität, die Verfügbarkeit und die Sicherheit des Produkts. 
-Ein solches Umfeld fördert Innovation und das Beschreiten neuer Wege.
+Ein solches Umfeld fördert Innovation und das Beschreiten neuer Wege. \parencite[vgl.][S. 2]{westrum:2004}
 
 DevOps strebt eine generative und leistungsorientierte Organisationskultur an, bei der Mitarbeiter, besonders die der Abteilungen Entwicklung, Qualitätssicherung und Betrieb in hohem Maße kollaborieren und kommunizieren. 
 Durch die Zusammenfügung verschiedener Abteilungen wird das Risiko auf alle Mitarbeiter gleichermaßen verteilt und alle sind für die Qualität des Produkts verantwortlich.
@@ -165,25 +130,25 @@ Da DevOps keine Praktiken für Projektmanagement beinhaltet, kann hier auf berei
  Die umfangreichste Anpassung ist die Aufhebung der Trennung der Abteilungen der Entwicklung, der Qualitätssicherung und des Betriebs. 
  Hierbei müssen die bestehenden Silos aufgelöst werden und ein gemeinsames Management für das gesamte Team geschaffen werden.
  
-Bei der Projektplanung muss beim Einsatz von DevOps berücksichtigt werden, dass keine getrennten Phasen für Qualitätssicherung und Testen notwendig sind, sondern stattdessen Zeit für die Erstellung und Einbindung automatisierter Tests in die Entwicklungsphase eingeplant werden muss.
+Bei der Projektplanung muss beim Einsatz von DevOps berücksichtigt werden, dass keine getrennten Phasen für Qualitätssicherung und Testen notwendig sind, sondern stattdessen Zeit für die Erstellung und Einbindung automatisierter Tests in die Entwicklungsphase eingeplant werden muss. \parencite[Vgl.][S. 2]{Null:2014}
 
 Durch den Einsatz von DevOps besteht zudem die Option, Fortschritt nicht nur in Textform als Bericht, sondern in Form lauffähiger Prototypen zu demonstrieren. 
 Dies ist eine der wichtigsten Eigenschaften agiler Vorgehensmodelle, bei denen zum Sprint Ende, im Durchschnitt alle zwei Wochen, ein solcher Prototyp an den Kunde ausgeliefert wird. 
-Mit Hilfe von DevOps ist es möglich, Prototypen mehrmals am Tag zu erzeugen. Mittels der automatisierten Pipeline entsteht aus jeder Änderung ein solcher Prototyp.
+Mit Hilfe von DevOps ist es möglich, Prototypen mehrmals am Tag zu erzeugen. Mittels der automatisierten Pipeline entsteht aus jeder Änderung ein solcher Prototyp. \parencite[Vgl.][S. 3]{Null:2014}
 
 Ein weiterer Vorteil, den der Einsatz von DevOps mit sich bringt, ist das \enquote{Design for Failure}. 
 In klassischen Projekten muss eine Fehlerstrategie extra erarbeitet werden. Bei DevOps besteht diese zum einen aus Standardisierung und Protokollierung jeglicher Änderungen, wodurch Fehlersuche sehr stark vereinfacht. 
 Zum anderen besteht diese Strategie aus einem sehr schnellen Recovery, bedingt durch den hohen Grad an Automatisierung. 
 Im Falle eines Fehlers, oder eines Ausfalls kann ein neues System automatisiert in kürzester Zeit neu ausgeliefert werden. 
 Dies ist besonders bei cloudbasierten Diensten, oder Webapplikationen wie Online Shops von besonderer Bedeutung, da hier Ausfallzeiten besonders hohe finanzielle Auswirkungen haben. 
-\parencite[Vgl.][]{Null:2014}
+\parencite[Vgl.][S. 3 - 4]{Null:2014}
 
 \subsection{IT Infrastructure Library (ITIL)}
 ITIL ist im Bereich des IT Managements ein internationaler \enquote{De-facto-Standard} und findet daher in vielen IT Abteilungen Anwendung. 
 Um DevOps in solch einem Umfeld einsetzen zu können, müssen keine vollkommen neuen Strukturen geschaffen werden, sondern DevOps kann parallel zu ITIL eingesetzt werden. 
 Dies ist ein großer Vorteil von DevOps, da die Veränderung vorhandener Strukturen mit Kosten verbunden ist. 
 So kann DevOps zunächst in geeigneten Bereichen getestet werden und bei Bedarf ausgebaut werden.
-Zur Einführung von DevOps in ITIL orientierte Bereiche wurde folgende Vorgehensweise entwickelt \parencite[vgl.][]{Sharp-Paul:2016}:
+Zur Einführung von DevOps in ITIL orientierte Bereiche wurde folgende Vorgehensweise entwickelt \parencite[vgl.][S. 1 - 3]{Sharp-Paul:2016}:
 
 \begin{itemize}
 \item Identifizierung der ITIL Prozesse
@@ -205,11 +170,11 @@ Dabei werden die Eintrittswahrscheinlichkeit und die Kosten im Falle eines Fehle
 Anschließend werden konkrete Maßnahmen definiert, wie in diesen Prozessen Automatisierung und Kollaboration gewinnbringend eingesetzt werden können. 
 Dies geschieht nun auf einem niedrigeren Abstraktionsniveau und liefert als Ergebnis die tatsächlich geplante Umsetzung. 
 In einem letzten Schritt folgt eine Priorisierung der einzelnen ITIL Prozesse und Maßnahmen und die tatsächliche Umsetzung. 
-\parencite[Vgl.][]{Sharp-Paul:2016}
+\parencite[Vgl.][S. 1 - 3]{Sharp-Paul:2016}
 
 \section{Optimierungspotentiale und Verbreitung} \label{sec:optimierung} % 1 Seiten
 In diesem Abschnitt werden die Optimierungspotentiale von DevOps im Vergleich zu bereits bestehenden Vorgehensmodellen und die Verbreitung von DevOps aufgezeigt. 
-Hierzu wurde der \enquote{State Of DevOps Report 2015} \parencite[vgl.][]{DevOpsSODR:2015} und ein Report von \parencite[][]{Gartner:2015} ausgewertet. 
+Hierzu wurde der \enquote{State Of DevOps Report 2015} \parencite[][]{DevOpsSODR:2015} und ein Report von \parencite[][]{Gartner:2015} ausgewertet. 
 In diesem Report wurden IT-Führungskräfte befragt, auf welche Art und Weise DevOps eingesetzt wird und welche Vorteile sich durch diesen Einsatz ergeben haben (vgl. \autoref{fig:devops_numbers}).
 
 \begin{figure}[ht]
@@ -227,11 +192,11 @@ Auch die Qualität des Produkts wird durch den kulturellen Wandel und automatisi
 Ein weiterer Nebeneffekt der Automatisierung ist ein 168 fach schnelleres Recovery im Falle eines Fehlers. 
 Die automatische Wiederherstellung eines Systems ist um ein Vielfaches schneller als eine manuelle Wiederherstellung. 
 Dies führt zu kürzeren Ausfallzeiten und deutlich geringeren finanziellen Schäden. 
-\parencite[Vgl.][]{DevOpsSODR:2015}
+\parencite[Vgl.][S. 10]{DevOpsSODR:2015}
 
 \subsection{Verbreitung}
 DevOps war in den Anfangsjahren eher eine Nischen Bewegung, die hauptsächlich in Cloud und Mobile Bereichen zum Einsatz kam. 
-In den Jahren 2014 und 2015 hat das Wachstum der Verbreitung stark zugenommen \parencite[vgl.][]{DevOpsSODR:2014, DevOpsSODR:2015}. 
+In den Jahren 2014 und 2015 hat das Wachstum der Verbreitung stark zugenommen \parencite[vgl.][S. 7]{DevOpsSODR:2014, DevOpsSODR:2015}. 
 Das Wachstum von DevOps wird \parencite[][]{Gartner:2015} zufolge im Verlauf des Jahres 2016 weiter stark zunehmen und zu einer Verbreitung von 25 Prozent weltweit führen.
 
 \section{Aktuelle Entwicklung von DevOps} % 3 Seiten
@@ -261,7 +226,7 @@ Dabei wird das System bei jedem Upgrade vollständig neu ausgeliefert und instal
 Dieses Vorgehen zieht keinen zusätzlichen Aufwand nach sich, da all diese Vorgängen automatisiert ausgeführt werden.
 Für die Sicherheit des Systems bedeutet solch ein Vorgehen jedoch einen großen Vorteil gegenüber bisherigen Systemen. 
 So können jegliche Artefakte des Systems über entsprechende Rechtevergabe als unveränderlich konfiguriert werden. 
-Sollte ein Angreifer Zugriff auf ein solches System erlangen, kann er keine Manipulationen an diesem durchführen.
+Sollte ein Angreifer Zugriff auf ein solches System erlangen, kann er keine Manipulationen an diesem durchführen. \parencite[Vgl.][S. 22]{fisher-miranda:2014}
 
 Bei DevOps wird auch, wie bereits erwähnt, die Konfiguration als Teil des Systems gesehen. 
 Diese wird mittels Virtualisierung in Form von Software entwickelt und verwaltet. 
@@ -286,7 +251,7 @@ Allerdings ist dies bei manueller Durchführung deutlich langsamer und kostenint
 Zudem müssen für die Übergangsphase, in der Teile des Systems eine alte und Teile des Systems eine Version besitzen, oftmals extra Systeme angemietet werden. 
 Diese Kosten sind bei automatisierten Auslieferung deutlich geringer. 
 Ein Rollback auf einer ältere Version ist manuell nur schwer möglich, da im Normalfall nicht genau dokumentiert ist, ob und welche manuellen Änderungen, oder Updates am System vorgenommen wurden. 
-Somit kann es unter Umständen unmöglich sein, eine alte Version wieder exakt herzustellen.
+Somit kann es unter Umständen unmöglich sein, eine alte Version wieder exakt herzustellen. \parencite[Vgl.][S. 23]{fisher-miranda:2014}
 
 \subsection{Auditierung und Compliance}
 Auditierung und Compliance können mitunter sehr kosten- und zeitintensiv sein. Auch hierbei kann der Einsatz von DevOps Zeit und damit Kosten sparen, da Auditierung und Compliance vereinfacht werden können. 
@@ -295,36 +260,29 @@ Zudem befindet sich das System jederzeit in einem genau definierten Zustand, der
 In bisherigen Modellen und Prozessen sind nicht alle Artefakte zentral verwaltet, wodurch nicht alle Änderungen protokolliert werden und der Zustand des Systems aufwendig bestimmt werden muss. 
 Auditierungen mit Hilfe von DevOps deutlich optimierter durchgeführt werden. 
 Die automatisierte Pipeline von DevOps bietet zudem die Möglichkeit, nicht nur automatisierte Sicherheitstests zu integrieren, sondern auch automatisierte Compliance Tests zu integrieren. 
-Dadurch kann sichergestellt werden, dass alle Änderungen, die am System vorgenommen werden, mit den Compliance Vorgaben übereinstimmen.
+Dadurch kann sichergestellt werden, dass alle Änderungen, die am System vorgenommen werden, mit den Compliance Vorgaben übereinstimmen. \parencite[Vgl.][S. 24]{fisher-miranda:2014}
 
-\subsection{Security as Software}
+\subsection{Software Defined Security}
 Wie bereits erwähnt liegt dieser Bereich von DevOps aktuell im Fokus der Entwicklung. 
-Die Vision, auf die hingearbeitet wird, ist \enquote{Security as Software}. 
+Die Vision, auf die hingearbeitet wird, ist \enquote{Software Defined Security}. 
 Ziel dieser Vision ist die vollständige Integration der Sicherheit eines Systems in die automatisierte Pipeline. 
 Da diese softwarebasiert ist, müssen alle Elemente des Sicherheitssystems in Form von Software vorliegen. 
 Da Automatisierung immer einen gewissen Grad an Abstraktion fordert, ist dieses Vorhaben entsprechend komplex. 
-Erste Schritte sind mit \enquote{Infrastructure as Software}, der damit verbundenen \enquote{Immutable Infrastructure}, \enquote{Phoenix Upgrades} und ersten automatisierten Sicherheitstests als Teil der Pipeline bereits getan. 
+Erste Schritte sind mit \enquote{Infrastructure as Code}, der damit verbundenen \enquote{Immutable Infrastructure}, \enquote{Phoenix Upgrades} und ersten automatisierten Sicherheitstests als Teil der Pipeline bereits getan. 
 Sollte hier ein Durchbruch und damit die vollständige Integration der Sicherheit in die Pipeline gelingen, so würde dies die Vorteile von DevOps und dessen Attraktivität noch deutlich erhöhen und dessen Anwendbarkeit deutlich erweitern.
 Damit wäre insbesondere der Einsatz von DevOps in sicherheitskritischen Bereichen möglich. 
 Der aktuelle Stand der Entwicklung lässt einen solchen Einsatz aktuell noch nicht zu. 
-Hierzu müssten zunächst entsprechende Vorgehensmodelle und Toolunterstützung entwickelt werden, mit denen eine exakte Umsetzung entsprechender Vorgaben und Normen, unter der Bewahrung der vorteilhaften Eigenschaften von DevOps, eingehalten werden könnten.
+Hierzu müssten zunächst entsprechende Vorgehensmodelle und Toolunterstützung entwickelt werden, mit denen eine exakte Umsetzung entsprechender Vorgaben und Normen, unter der Bewahrung der vorteilhaften Eigenschaften von DevOps, eingehalten werden könnten. \parencite[Vgl.][S. 27]{fisher-miranda:2014}
 
 \section{Fallstudie} % 3 Seiten
 Die folgende Fallstudie zeigt beispielhaft die Einführung und Einbettung von DevOps in bereits vorhandene Vorgehensmodelle und Prozesse in einer Organisation. 
 Sie zeigt die Einführung von DevOps bei Nordstrom, einem Fashion Retailer aus Nordamerika, der Boutiquen, Einkaufszentren und einen Online Shop betreibt.
 
-%\begin{figure}[ht]
-%  \centering
-%  \includegraphics[width=0.5\textwidth]{img/nordstrom_logo.png}
-%  \caption{Nordstrom Logo \parencite[][]{Nordstrom:2016}}
-%  \label{fig:scrummodell}
-%\end{figure}
-
 \subsection{Einführung}
 Nordstrom hatte vor der partiellen Einführung von DevOps ein klassische Aufteilung der Abteilungen. 
 So gab es in der IT unter anderem getrennte Abteilungen für Entwicklung, Qualitätssicherung und Betrieb.
 Bedingt durch die Trennung der Abteilungen waren die Update Zyklen für die Homepage, den Online Shop und die Kassensysteme in den Boutiquen sehr lang. 
-\parencite[Vgl.][S. 1 ff.]{Reed:2014}
+\parencite[Vgl.][S. 1 - 2]{Reed:2014}
 
 Updates der Systeme wurden manuell durchgeführt, meist über Nacht, um den dabei anfallenden Schaden durch Ausfallzeiten möglichst gering zu halten. 
 Trotzdem dauerte ein Update der Homepage eine komplette Nacht. 
@@ -335,7 +293,7 @@ Die Entwickler entwickelten die Systeme auf ihren eigenen Entwicklungsumgebungen
 Die Systeme konnten zwar im Anschluss an die Entwicklung entsprechend getestet werden, aber Probleme, die in Zusammenhang mit der Produktionsumgebung auftraten, konnten dabei allerdings nicht getestet werden und führten beim Update Vorgang zu großen Verzögerungen.
 Bedingt durch die vielen manuell durchgeführten Schritte bei der Konfiguration und Installation der Systeme konnte nur langsam auf Probleme reagiert werden. 
 Auf Grund mangelhafter Dokumentation, nicht reproduzierbarer Schritte und unterschiedlichen Konfigurationen in den Umgebungen war die Suche nach Fehlern stark erschwert und hat im Falle eines Ausfalls großen finanziellen Schaden nach sich gezogen. 
-\parencite[Vgl.][S. 3 ff.]{Reed:2014}
+\parencite[Vgl.][S. 2 - 4]{Reed:2014}
 
 \subsection{Optimierungspotentiale durch DevOps}
 Der thematisch interessanteste und kundenwirksamste Bereich DevOps zu testen wäre die Homepage gewesen. 
